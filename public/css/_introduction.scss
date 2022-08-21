@@ -1,0 +1,24 @@
+.intro {
+    &_content {
+        color: $gray-7d;
+        font-weight: normal;
+        line-height: 25px;
+        margin: 0;
+        text-align: justify;
+    }
+    &-global {
+        text-align: center;
+        padding: 100px 20px 0;
+        background-image: url(../img/global-bg.png);
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        .title-home {
+            margin-bottom: 15px;
+        }
+        .intro_content {
+            text-align: center;
+            margin: 0 0 35px;
+        }
+    }
+}

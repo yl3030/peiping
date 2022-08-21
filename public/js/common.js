@@ -65,3 +65,8 @@ $(".header_menu").click(function(){
     $(this).toggleClass("active");
     $(".header_nav").toggleClass("active");
 })
+
+// go to top
+$(".btn-top").click(function(){
+    $("html,body").animate({scrollTop:0},300);
+})

@@ -2,6 +2,11 @@
 
 $main-red:#BB000F;
 $main-blue:#194C9F;
+$second-blue:#C1CDE3;
+$third-blue:#273A5E;
+$gray-99:#999;
+$gray-48:#484848;
+$gray-7d:#7d7d7d;
 $common-transition:0.3s;
 $container-padding-xxl: calc((100vw - 1320px)/2 + 20px);
 $container-padding-xl: calc((100vw - 1140px)/2 + 20px);
@@ -338,6 +343,14 @@ input, select, textarea, button {
                     >a {
                         color: #000;
                     }
+                    &:hover, &.active {
+                        >a {
+                            color: $main-blue;
+                            &::after {
+                                background-color: $main-blue;
+                            }
+                        }
+                    }
                 }
             }
             &_search {
@@ -363,6 +376,9 @@ input, select, textarea, button {
                     path {
                         stroke: #000;
                     }
+                }
+                &_list {
+                    border: 1px solid #000;
                 }
             }
         }
@@ -409,6 +425,80 @@ input, select, textarea, button {
     }
     &_func {
         padding: 25px;
+    }
+}
+
+.title {
+    &-home {
+        font-size: 42px;
+        font-weight: bold;
+        margin-bottom: 35px;
+    }
+}
+
+.footer {
+    background-color: $main-blue;
+    color: #fff;
+    &_top {
+        padding: 20px 0 50px;
+    }
+    h3 {
+        font-size: 18px;
+        margin-bottom: 15px;
+        font-weight: bold;
+        a {
+            color: #fff;
+        }
+    }
+    ul {
+        li {
+            a {
+                color: $second-blue;
+                font-size: 14px;
+                font-weight: normal;
+                transition: $common-transition;
+                &:hover {
+                    color: #fff;
+                    font-weight: bold;
+                }
+            }
+        }
+    }
+    &_copyright {
+        text-align: center;
+        padding: 10px 20px;
+        background-color: $second-blue;
+        color: $third-blue;
+        font-size: 14px;
+        font-weight: normal;
+    }
+}
+
+.btn-top {
+    position: fixed;
+    width: 40px;
+    height: 52px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    right: 40px;
+    bottom: 50px;
+    cursor: pointer;
+    z-index: 100;
+    transition: $common-transition;
+    img {
+        width: 100%;
+        filter: drop-shadow(0 1px 10px rgba(0,0,0,0.25));
+        // box-shadow: inset 0 1px 5px rgba(0,0,0,0.15);
+    }
+    &:hover {
+        transform: scale(1.1);
+    }
+}
+
+@media screen and (max-width:1199.98px) {
+    .title-home {
+        font-size: 38px;
     }
 }
 
@@ -493,6 +583,18 @@ input, select, textarea, button {
     }
 }
 
+@media screen and (max-width:575.98px) {
+    .title-home {
+        font-size: 36px;
+    }
+}
+
+@media screen and (max-width:450px) {
+    .title-home {
+        font-size: 30px;
+    }
+}
+
 
 
 
@@ -500,6 +602,12 @@ input, select, textarea, button {
     .nav {
         &_bg {
             width: calc(621px + 60px + (100vw - 960px)/2 + 20px);
+        }
+        &_drop {
+            width: calc(621px + 60px + (100vw - 960px)/2 + 20px);
+        }
+        &_pic {
+            width: calc((621px + 60px + (100vw - 960px)/2 + 20px - 120px) * 0.4);
         }
     }
 }
@@ -509,6 +617,12 @@ input, select, textarea, button {
         &_bg {
             width: calc(621px + 60px + (100vw - 1140px)/2 + 20px);
         }
+        &_drop {
+            width: calc(621px + 60px + (100vw - 1140px)/2 + 20px);
+        }
+        &_pic {
+            width: calc((621px + 60px + (100vw - 1140px)/2 + 20px - 120px) * 0.4);
+        }
     }
 }
 
@@ -516,6 +630,12 @@ input, select, textarea, button {
     .nav {
         &_bg {
             width: calc(621px + 60px + (100vw - 1320px)/2 + 20px);
+        }
+        &_drop {
+            width: calc(621px + 60px + (100vw - 1320px)/2 + 20px);
+        }
+        &_pic {
+            width: calc((621px + 60px + (100vw - 1320px)/2 + 20px - 120px) * 0.4);
         }
     }
 }
