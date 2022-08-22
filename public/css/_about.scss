@@ -1,0 +1,143 @@
+.intro {
+    &_content {
+        color: $gray-7d;
+        font-weight: normal;
+        line-height: 25px;
+        margin: 0;
+        text-align: justify;
+    }
+    &-global {
+        text-align: center;
+        padding: 100px 20px 0;
+        background-image: url(../img/global-bg.png);
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        .title-home {
+            margin-bottom: 15px;
+        }
+        .intro_content {
+            text-align: center;
+            margin: 0 0 35px;
+        }
+    }
+}
+
+.tab-about {
+    .nav-link {
+        width: 170px;
+        text-align: center;
+        padding: 10px;
+    }
+}
+
+.company {
+    padding-left: 15vw;
+    margin-top: 6.25vw;
+    .title-home {
+        margin-bottom: 25px;
+    }
+    &_inner {
+        padding-right: $container-padding-lg;
+        position: relative;
+        background-color: $gray-ec;
+        padding-top: 50px;
+        padding-bottom: 100px;
+        padding-left: 45%;
+    }
+    &_pic {
+        width: 55%;
+        position: absolute;
+        left: -15%;
+        top: -10%;
+    }
+    &_style {
+        position: absolute;
+        height: 100%;
+        top: 0;
+        right: 100%;
+    }
+}
+
+@media screen and (max-width:1399.98px) {
+    .company {
+        &_inner {
+            padding-bottom: 80px;
+        }
+    }
+}
+
+@media screen and (max-width:1199.98px) {
+    .company {
+        &_pic {
+            top: 50%;
+            transform: translateY(-50%);
+        }
+    }
+}
+
+@media screen and (max-width:991.98px) {
+    .company {
+        padding-left: 0;
+        .title-home {
+            font-size: 32px;
+            margin-bottom: 15px;
+        }
+        &_inner {
+            padding: 0 !important;
+        }
+        &_pic {
+            position: static;
+            transform: none;
+            width: 100%;
+        }
+        &_text {
+            padding: 50px 40px;
+            width: 100%;
+        }
+        &_style {
+            display: none;
+        }
+    }
+}
+
+@media screen and (max-width:767.98px) {
+    .company {
+        &_text {
+            padding: 40px 20px;
+        }
+    }
+}
+
+@media screen and (min-width:768px) {
+    .company {
+        &_inner {
+            padding-right: 40px;
+        }
+    }
+}
+
+@media screen and (min-width:992px) {
+    .company {
+        &_inner {
+            padding-right: $container-padding-lg;
+        }
+    }
+}
+
+@media screen and (min-width:1200px) {
+    .company {
+        &_inner {
+            padding-right: $container-padding-xl;
+        }
+    }
+}
+
+
+@media screen and (min-width:1400px) {
+    .company {
+        &_inner {
+            padding-right: $container-padding-xxl;
+        }
+    }
+}
