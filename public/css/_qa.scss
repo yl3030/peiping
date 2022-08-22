@@ -1,0 +1,167 @@
+.tab-qa {
+    .nav-link {
+        padding: 10px 25px ;
+
+    }
+}
+
+.qa {
+    padding-bottom: 100px;
+    &_item {
+        margin-bottom: 35px;
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+    &_ask {
+        padding-right: 40px;
+        cursor: pointer;
+        &_inner {
+            background-color: $gray-ec;
+            padding-left: 40px;
+            padding-top: 15px;
+            padding-bottom: 15px;
+            padding-right: 25px;
+            position: relative;
+            p {
+                padding-left: 55px;
+                padding-right: 15px;
+                margin: 0;
+                width: calc(100% - 15px);
+                color: $gray-46;
+            }
+        }
+        &_arrow {
+            width: 15px;
+            height: 15px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: $common-transition;
+            img {
+                width: 88%;
+            }
+            &.active {
+                transform: rotate(90deg);
+            }
+        }
+        &_q {
+            position: absolute;
+            width: 38px;
+            left: 40px;
+            top: -15px;
+        }
+    }
+    &_answer {
+        padding-left: 40px;
+        margin-top: -25px;
+        display: none;
+        &_inner {
+            padding-right: 40px;
+            color: #fff;
+            font-weight: normal;
+            background-color: $main-blue;
+            padding-top: 45px;
+            padding-bottom: 15px;
+            padding-left: 25px;
+            p {
+                margin: 0;
+            }
+        }
+    }
+}
+
+@media screen and (max-width:575.98px) {
+    .tab-qa {
+        .nav-link {
+            padding: 10px 15px;
+        }
+    }
+    .qa {
+        &_ask {
+            padding-right: 0;
+            &_inner {
+                padding-left: 20px;
+                p {
+                    // padding-left: 75px;
+                    font-size: 14px;
+                }
+            }
+            &_q {
+                left: 20px;
+                // position: static;
+            }
+        }
+        &_answer {
+            padding-left: 0;
+            margin-top: 0;
+            &_inner {
+                padding-right: 20px;
+                padding-top: 15px;
+                p {
+                    font-size: 14px;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (min-width:992px) {
+    .qa {
+        &_ask {
+            padding-right: $container-padding-lg;
+            &_inner {
+                padding-left: $container-padding-lg;
+            }
+            &_q {
+                left: $container-padding-lg;
+            }
+        }
+        &_answer {
+            padding-left: $container-padding-lg;
+            &_inner {
+                padding-right: $container-padding-lg;
+            }
+        }
+    }
+}
+
+@media screen and (min-width:1200px) {
+    .qa {
+        &_ask {
+            padding-right: $container-padding-xl;
+            &_inner {
+                padding-left: $container-padding-xl;
+            }
+            &_q {
+                left: $container-padding-xl;
+            }
+        }
+        &_answer {
+            padding-left: $container-padding-xl;
+            &_inner {
+                padding-right: $container-padding-xl;
+            }
+        }
+    }
+}
+
+@media screen and (min-width:1400px) {
+    .qa {
+        &_ask {
+            padding-right: $container-padding-xxl;
+            &_inner {
+                padding-left: $container-padding-xxl;
+            }
+            &_q {
+                left: $container-padding-xxl;
+            }
+        }
+        &_answer {
+            padding-left: $container-padding-xxl;
+            &_inner {
+                padding-right: $container-padding-xxl;
+            }
+        }
+    }
+}
