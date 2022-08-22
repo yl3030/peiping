@@ -29,7 +29,7 @@
                 <nav class="header_nav d-lg-flex">
                     <ul class="header_nav_hasdrop header_nav_first d-lg-flex">
                         <li class="header_nav_item active">
-                            <a href="./product.html">
+                            <a href="">
                                 <span>Product</span>
                             </a>
                             <div class="header_nav_drop">
@@ -233,252 +233,310 @@
         <div class="page-banner page-banner-product">
             <div class="page-banner_mask"></div>
             <img class="page-banner_style" src="./public/img/innerPage-style.png" alt="">
-            <h1>Products</h1>
+            <h1>Inquiry Cart</h1>
         </div>
         <nav aria-label="breadcrumb" class="container">
             <ol class="breadcrumb">
               <li class="breadcrumb-item"><a href="./index.html">Home</a></li>
-              <li class="breadcrumb-item active" aria-current="page">Products</li>
+              <li class="breadcrumb-item"><a href="./product.html">Products</a></li>
+              <li class="breadcrumb-item active" aria-current="page">Inquiry Cart</li>
             </ol>
         </nav>
+    
+        <div class="order-list">
+            <h2 class="inquiry-title"><span>ORDER LIST</span></h2>
+            <div>
+                <div class="order-list_item d-sm-flex align-items-center flex-wrap">
+                    <a href="./product-content.html" class="order-list_left"><img src="./public/img/product-PP-13D.png" alt=""></a>
+                    <div class="order-list_right d-md-flex flex-wrap align-items-center justify-content-between">
+                        <div class="order-list_text">
+                            <h3>Universal Tool & Cutter Grinder</h3>
+                            <p>Universal Cutter Grinder (PP-32N)</p>
+                        </div>
+                        <div class="order-list_operate d-flex align-items-center mt-md-0 mt-3">
+                            <div class="order-list_num d-flex">
+                                <button class="order-list_numBtn minus">
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M5 12H19" stroke="#C6C6C6" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                    </svg>    
+                                </button>
+                                <input class="order-list_numInput" type="number" value="1">
+                                <button class="order-list_numBtn add">
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M12 5V19" stroke="#C6C6C6" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                        <path d="M5 12H19" stroke="#C6C6C6" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                    </svg> 
+                                </button>
+                            </div>
+                            <div class="order-list_close"><img src="./public/img/icon-close.svg" alt=""></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="order-list_item d-sm-flex align-items-center flex-wrap">
+                    <a href="./product-content.html" class="order-list_left"><img src="./public/img/product-PP-13SG.png" alt=""></a>
+                    <div class="order-list_right d-md-flex flex-wrap align-items-center justify-content-between">
+                        <div class="order-list_text">
+                            <h3>Universal Tool & Cutter Grinder</h3>
+                            <p>Universal Cutter Grinder (PP-32N)</p>
+                        </div>
+                        <div class="order-list_operate d-flex align-items-center mt-md-0 mt-3">
+                            <div class="order-list_num d-flex">
+                                <button class="order-list_numBtn minus">
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M5 12H19" stroke="#C6C6C6" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                    </svg>    
+                                </button>
+                                <input class="order-list_numInput" type="number" value="1">
+                                <button class="order-list_numBtn add">
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M12 5V19" stroke="#C6C6C6" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                        <path d="M5 12H19" stroke="#C6C6C6" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                    </svg> 
+                                </button>
+                            </div>
+                            <div class="order-list_close"><img src="./public/img/icon-close.svg" alt=""></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
 
-        <div class="product-list-outer">
-            <div class="product-list-outer_item">
-                <div class="product-list-outer_pic">
-                    <img src="./public/img/product-PP-32N.png" alt="">
-                </div>
-                <div class="product-list-outer_menu">
-                    <h2>Universal Tool & Cutter Grinder</h2>
-                    <div class="row">
-                        <div class="col-md-6">
-                            <ul class="">
-                                <li><a href="">Universal Cutter Grinder (PP-32N)</a></li>
-                                <li><a href="">Universal Tool & Cutter Grinder (PP-600 / PP-600-DW)</a></li>
-                                <li><a href="">Universal Tool & Cutter Grinder (PP-50)</a></li>
-                                <li><a href="">Universal Drill & Tap Grinder (PP-850)</a></li>
+        <div class="inquiry-form">
+            <form class="inquiry-form_content">
+                <h2 class="inquiry-title"><span>INQUIRY FORM</span></h2>
+                <p>be sure to enter the correct information, thank you !</p>
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="inquiry-form_item">
+                            <label for="">Inquiry subject<span>*</span></label>
+                            <input type="text">
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="inquiry-form_item">
+                            <label for="">Name<span>*</span></label>
+                            <input type="text">
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="inquiry-form_item">
+                            <label for="">Company<span>*</span></label>
+                            <input type="text">
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="inquiry-form_item">
+                            <label for="">Email<span>*</span></label>
+                            <input type="text">
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="inquiry-form_item">
+                            <label for="">Address</label>
+                            <input type="text">
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="inquiry-form_item">
+                            <label for="">City</label>
+                            <input type="text">
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="inquiry-form_item">
+                            <label for="">State/Province</label>
+                            <input type="text">
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="inquiry-form_item">
+                            <label for="">Zip/Postal code</label>
+                            <input type="text">
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="inquiry-form_item">
+                            <label for="">Country<span>*</span></label>
+                            <input type="text">
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="inquiry-form_item">
+                            <label for="">Tel</label>
+                            <input type="text">
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="inquiry-form_item">
+                            <label for="">Fax</label>
+                            <input type="text">
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="inquiry-form_item">
+                            <label for="">Attachment</label>
+                            <div class="inquiry-form_attach d-flex align-items-center justify-content-between">
+                                <div class="inquiry-form_attach_main d-flex align-items-center">
+                                    <div class="inquiry-form_upload">
+                                        <div class="btn-upload_bg"></div>
+                                        <div class="btn-upload">upload</div>
+                                        <input class="btn-uploadInput" type="file">
+                                    </div>
+                                    <p class="inquiry-form_attach_name"></p>
+                                </div>
+                                <div class="inquiry-form_attach_delete"><img src="./public/img/icon-close.svg" alt=""></div>
+                                <span class="inquiry-form_attach_remark">(500k)</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="inquiry-form_item">
+                            <label for="">Business Type</label>
+                            <ul class="inquiry-form_list">
+                                <li class="inquiry-form_radioList">
+                                    <div class="inquiry-form_radio">
+                                        <div class="inquiry-form_radio_content"></div>
+                                    </div>
+                                    <span class="inquiry-form_name">Importer</span>
+                                </li>
+                                <li class="inquiry-form_radioList">
+                                    <div class="inquiry-form_radio">
+                                        <div class="inquiry-form_radio_content"></div>
+                                    </div>
+                                    <span class="inquiry-form_name">Wholesaler</span>
+                                </li>
+                                <li class="inquiry-form_radioList">
+                                    <div class="inquiry-form_radio">
+                                        <div class="inquiry-form_radio_content"></div>
+                                    </div>
+                                    <span class="inquiry-form_name">Agent</span>
+                                </li>
+                                <li class="inquiry-form_radioList">
+                                    <div class="inquiry-form_radio">
+                                        <div class="inquiry-form_radio_content"></div>
+                                    </div>
+                                    <span class="inquiry-form_name">Distributor</span>
+                                </li>
+                                <li class="inquiry-form_radioList">
+                                    <div class="inquiry-form_radio">
+                                        <div class="inquiry-form_radio_content"></div>
+                                    </div>
+                                    <span class="inquiry-form_name">End User</span>
+                                </li>
+                                <li class="inquiry-form_radioList">
+                                    <div class="inquiry-form_radio">
+                                        <div class="inquiry-form_radio_content"></div>
+                                    </div>
+                                    <span class="inquiry-form_name">Manufacturer</span>
+                                </li>
                             </ul>
                         </div>
-                        <div class="col-md-6">
-                            <ul class="">
-                                <li><a href="">Universal Drill & Tap Grinder (PP-60N)</a></li>
-                                <li><a href="">Universal Drill & Tap Grinder (PP-80N / PP-100N)</a></li>
+                        <div class="inquiry-form_item">
+                            <label for="">Business Type</label>
+                            <textarea name="" id="" cols="30" rows="5"></textarea>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="inquiry-form_item">
+                            <label for="">Request for Information</label>
+                            <ul class="inquiry-form_list">
+                                <li class="inquiry-form_checkList">
+                                    <div class="inquiry-form_check">
+                                        <img src="./public/img/icon-check.svg" alt="">
+                                    </div>
+                                    <span class="inquiry-form_name">Data Sheet/Brochure of the above product(s)</span>
+                                </li>
+                                <li class="inquiry-form_checkList">
+                                    <div class="inquiry-form_check">
+                                        <img src="./public/img/icon-check.svg" alt="">
+                                    </div>
+                                    <span class="inquiry-form_name">Minimum Order</span>
+                                </li>
+                                <li>
+                                    <div class="inquiry-form_checkList">
+                                        <div class="inquiry-form_check">
+                                            <img src="./public/img/icon-check.svg" alt="">
+                                        </div>
+                                        <span class="inquiry-form_name">Price quote</span>
+                                    </div>
+                                    <ul class="inquiry-form_list second-layer mb-1">
+                                        <li class="inquiry-form_radioList">
+                                            <div class="inquiry-form_radio">
+                                                <div class="inquiry-form_radio_content"></div>
+                                            </div>
+                                            <span class="inquiry-form_name">FOB</span>
+                                        </li>
+                                        <li class="inquiry-form_radioList">
+                                            <div class="inquiry-form_radio">
+                                                <div class="inquiry-form_radio_content"></div>
+                                            </div>
+                                            <span class="inquiry-form_name">CIF</span>
+                                        </li>
+                                        <li class="inquiry-form_radioList">
+                                            <div class="inquiry-form_radio">
+                                                <div class="inquiry-form_radio_content"></div>
+                                            </div>
+                                            <span class="inquiry-form_name">C&F</span>
+                                        </li>
+                                        <li class="inquiry-form_radioList">
+                                            <div class="inquiry-form_radio">
+                                                <div class="inquiry-form_radio_content"></div>
+                                            </div>
+                                            <span class="inquiry-form_name">Other</span>
+                                            <input class="inquiry-form_radio_textInput" type="text">
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li class="inquiry-form_checkList">
+                                    <div class="inquiry-form_check">
+                                        <img src="./public/img/icon-check.svg" alt="">
+                                    </div>
+                                    <span class="inquiry-form_name">Sample availability and price</span>
+                                </li>
+                                <li class="inquiry-form_checkList">
+                                    <div class="inquiry-form_check">
+                                        <img src="./public/img/icon-check.svg" alt="">
+                                    </div>
+                                    <span class="inquiry-form_name">Delivery lead time</span>
+                                </li>
+                                <li class="inquiry-form_checkList">
+                                    <div class="inquiry-form_check">
+                                        <img src="./public/img/icon-check.svg" alt="">
+                                    </div>
+                                    <span class="inquiry-form_name">Monthly production capacity of the above product</span>
+                                </li>
+                                <li class="inquiry-form_checkList">
+                                    <div class="inquiry-form_check">
+                                        <img src="./public/img/icon-check.svg" alt="">
+                                    </div>
+                                    <span class="inquiry-form_name">Payment terms</span>
+                                </li>
+                                <li class="inquiry-form_checkList">
+                                    <div class="inquiry-form_check">
+                                        <img src="./public/img/icon-check.svg" alt="">
+                                    </div>
+                                    <span class="inquiry-form_name">Company Brochure</span>
+                                </li>
                             </ul>
                         </div>
                     </div>
-                    <a href="" class="product_more">more</a>
-                </div>
-            </div>
-            <div class="product-list-outer_item">
-                <div class="product-list-outer_pic">
-                    <img src="./public/img/product-PP-25.png" alt="">
-                </div>
-                <div class="product-list-outer_menu">
-                    <h2>Tool Grinder</h2>
-                    <div class="row">
-                        <div class="col-md-6">
-                            <ul class="">
-                                <li><a href="">Precision End Mill Grinder (PP-25)</a></li>
-                                <li><a href="">Gun Drill Grinder / Deep Hole Drill Grinder (PP-08 / PP-08L)</a></li>
-                                <li><a href="">Hole Saw & Annular Cutter Grinder (PP-11)</a></li>
-                                <li><a href="">Punch Tool Grinder for CNC Turret Punch Press (PP-600P)</a></li>
-                            </ul>
-                        </div>
-                        <div class="col-md-6">
-                            <ul class="">
-                                <li><a href="">Straight Flute Tap Grinder (PP-50T / PP-50TL)</a></li>
-                                <li><a href="">Slitting Cutter Grinder</a></li>
-                                <li><a href="">Oil Seal Trimming Tool Grinder (PP-32SO)</a></li>
-                                <li><a href="">Diamond Wheel Dressing Grinder (PP-50W)</a></li>
-                            </ul>
+                    <div class="col-md-6">
+                        <div class="inquiry-form_item">
+                            <label for="">Code<span>*</span></label>
+                            <div class="inquiry-form_code d-flex align-items-center">
+                                <input type="text">
+                                <div class="inquiry-form_code_pic"><img src="./public/img/certify.png" alt=""></div>
+                                <div class="btn-change"><img src="./public/img/icon_transfer.svg" alt=""></div>
+                            </div>
                         </div>
                     </div>
-                    <a href="" class="product_more">more</a>
-                </div>
-            </div>
-            <div class="product-list-outer_item">
-                <div class="product-list-outer_pic">
-                    <img src="./public/img/product-PP-U2.png" alt="">
-                </div>
-                <div class="product-list-outer_menu">
-                    <h2>Universal Cutter Grinder</h2>
-                    <div class="row">
-                        <div class="col-md-6">
-                            <ul class="">
-                                <li><a href="">Universal Cutter Grinder (Engraving Cutter Use) (PP-U2)</a></li>
-                                <li><a href="">Universal Cutter Grinder (Engraving Cutter Use) (PP-U2 + Microscope)</a></li>
-                                <li><a href="">Turning Tool Grinder (PP-125)</a></li>
-                                <li><a href="">Auto Saw Blade Grinder (PP-400)</a></li>
-                            </ul>
+                    <div class="col-md-6">
+                        <div class="inquiry-form_item inquiry-form_btn d-flex justify-content-end">
+                            <button class="inquiry-form_btnItem">SUBMIT</button><div class="inquiry-form_btnItem btn-clear">CLEAR</div>
                         </div>
                     </div>
-                    <a href="" class="product_more">more</a>
                 </div>
-            </div>
-            <div class="product-list-outer_item">
-                <div class="product-list-outer_pic">
-                    <img src="./public/img/product-PP-13D.png" alt="">
-                </div>
-                <div class="product-list-outer_menu">
-                    <h2>Portable Drill & End Mill Grinder</h2>
-                    <div class="row">
-                        <div class="col-md-6">
-                            <ul class="">
-                                <li><a href="">Combo</a></li>
-                                <li><a href="">End Mill</a></li>
-                                <li><a href="">Drill Bit</a></li>
-                            </ul>
-                        </div>
-                    </div>
-                    <a href="" class="product_more">more</a>
-                </div>
-            </div>
-            <div class="product-list-outer_item">
-                <div class="product-list-outer_pic">
-                    <img src="./public/img/product-PP-DM.png" alt="">
-                </div>
-                <div class="product-list-outer_menu">
-                    <h2>Diamond & PCBN Tool Grinder (PP-DM / PP-DM II)</h2>
-                    <div class="row">
-                        <div class="col-md-6">
-                            <ul class="">
-                                <li><a href="">Diamond & PCBN Tool Grinder (PP-DM / PP-DM II)</a></li>
-                            </ul>
-                        </div>
-                    </div>
-                    <a href="" class="product_more">more</a>
-                </div>
-            </div>
-            <div class="product-list-outer_item">
-                <div class="product-list-outer_pic">
-                    <img src="./public/img/product-PP-A1.png" alt="">
-                </div>
-                <div class="product-list-outer_menu">
-                    <h2>Spindle/ Holder Polishing Machines</h2>
-                    <div class="row">
-                        <div class="col-md-6">
-                            <ul class="">
-                                <li><a href="">Precision Spindle Polishing Machine (PP-A1)</a></li>
-                                <li><a href="">Tool Holder Maintenance & Polish Machine (PP-A2)</a></li>
-                            </ul>
-                        </div>
-                    </div>
-                    <a href="" class="product_more">more</a>
-                </div>
-            </div>
-            <div class="product-list-outer_item">
-                <div class="product-list-outer_pic">
-                    <img src="./public/img/product-PP-500.png" alt="">
-                </div>
-                <div class="product-list-outer_menu">
-                    <h2>Straight Knife Grinder</h2>
-                    <div class="row">
-                        <div class="col-md-6">
-                            <ul class="">
-                                <li><a href="">Heavy Duty Straight Knife Grinder (PP-500)</a></li>
-                                <li><a href="">Super Sharp Straight Knife Grinder (PP-600S)</a></li>
-                                <li><a href="">Super Sharp Straight Knife Grinder (PP-650A)</a></li>
-                                <li><a href="">Heavy Duty Straight Knife Grinder (PP-1500)</a></li>
-                            </ul>
-                        </div>
-                    </div>
-                    <a href="" class="product_more">more</a>
-                </div>
-            </div>
-            <div class="product-list-outer_item">
-                <div class="product-list-outer_pic">
-                    <img src="./public/img/product-PP-26.png" alt="">
-                </div>
-                <div class="product-list-outer_menu">
-                    <h2>Cutting-off Machine</h2>
-                    <div class="row">
-                        <div class="col-md-6">
-                            <ul class="">
-                                <li><a href="">Rotary Cutting-off & Grinding Machine (PP-26 / PP-26L)</a></li>
-                                <li><a href="">Cutting-off Machine (PP-16C)</a></li>
-                            </ul>
-                        </div>
-                    </div>
-                    <a href="" class="product_more">more</a>
-                </div>
-            </div>
-            <div class="product-list-outer_item">
-                <div class="product-list-outer_pic">
-                    <img src="./public/img/product-PP-13SG.png" alt="">
-                </div>
-                <div class="product-list-outer_menu">
-                    <h2>Conventional Lathe</h2>
-                    <div class="row">
-                        <div class="col-md-6">
-                            <ul class="">
-                                <li><a href="">Bench Lathe (PP-1340GH)</a></li>
-                                <li><a href="">High Speed Precision Lathe (PP-1324E)</a></li>
-                                <li><a href="">High Speed Precision Lathe (PP-1440E)</a></li>
-                            </ul>
-                        </div>
-                    </div>
-                    <a href="" class="product_more">more</a>
-                </div>
-            </div>
-            <div class="product-list-outer_item">
-                <div class="product-list-outer_pic">
-                    <img src="./public/img/product-PP-13SX.png" alt="">
-                </div>
-                <div class="product-list-outer_menu">
-                    <h2>Machine Accessories</h2>
-                    <div class="row">
-                        <div class="col-md-6">
-                            <ul class="">
-                                <li><a href="">Optional Accessories (Optional Acc.)</a></li>
-                                <li><a href="">Accessories for Machine-1 (Acc. for machine)</a></li>
-                                <li><a href="">Accessories for Machine-2 (Acc. for machine)</a></li>
-                                <li><a href="">Work Cabinet (WKCB)</a></li>
-                            </ul>
-                        </div>
-                        <div class="col-md-6">
-                            <ul class="">
-                                <li><a href="">Cooling System (PP-CLM)</a></li>
-                                <li><a href="">Dust Collection (YC-602)</a></li>
-                                <li><a href="">Dust Collection with Filter Bag (YC-678)</a></li>
-                            </ul>
-                        </div>
-                    </div>
-                    <a href="" class="product_more">more</a>
-                </div>
-            </div>
-            <div class="product-list-outer_item">
-                <div class="product-list-outer_pic">
-                    <img src="./public/img/product-PP-13X.png" alt="">
-                </div>
-                <div class="product-list-outer_menu">
-                    <h2>Core Drill</h2>
-                    <div class="row">
-                        <div class="col-md-6">
-                            <ul class="">
-                                <li><a href="">Rapid Core-stay Drills w/ throw-away inserts [Coolant feeding type] (BT50-WCMX)</a></li>
-                                <li><a href="">Rapid Core-stay Drills w/ throw-away inserts [Side lock type] (C-WCMT)</a></li>
-                            </ul>
-                        </div>
-                    </div>
-                    <a href="" class="product_more">more</a>
-                </div>
-            </div>
-            <div class="product-list-outer_item">
-                <div class="product-list-outer_pic">
-                    <img src="./public/img/product-PP-16C.png" alt="">
-                </div>
-                <div class="product-list-outer_menu">
-                    <h2>Aluminum Alloy Swivel Discoid/ Lazy Susan</h2>
-                    <div class="row">
-                        <div class="col-md-6">
-                            <ul class="">
-                                <li><a href="">LAZY ALLOY REVOLVING PLATE DISC (CYS-246, CYS-330, CYS-390, CYS-480, CYS-800, CYS-1310, Auto Rotary Disk)</a></li>
-                                <li><a href="">Multipurpose Electric Lazy Susans (P10)</a></li>
-                            </ul>
-                        </div>
-                    </div>
-                    <a href="" class="product_more">more</a>
-                </div>
-            </div>
+            </form>
         </div>
 
         <div class="category">
@@ -486,7 +544,10 @@
                 <img src="./public/img/arrow2-white-right.svg" alt="">
                 <span>CATEGORY</span>
             </div>
-            <a href=""><img src="./public/img/icon-cart.svg" alt=""></a>
+            <a href="">
+                <img src="./public/img/icon-cart.svg" alt="">
+                <div class="category_inquiryNum">10</div>
+            </a>
         </div>
 
     </main>
@@ -628,6 +689,66 @@
     <script src="./public/js/swiper/swiper-bundle.min.js"></script>
     <script src="./public/js/aos/aos.js"></script>
     <script src="./public/js/common.js"></script>
+
+    <script>
+        // inquiry number
+        $(".order-list_numBtn").click(function(){
+            let num = $(this).parents(".order-list_num").find(".order-list_numInput").val();
+            if(num==""){
+                num = 0;
+            }
+            let numInt = parseInt(num);
+            if($(this).hasClass("minus")){
+                if(numInt<=0){
+                    numInt = 0;
+                }else {
+                    numInt = numInt - 1;
+                }
+            }else if($(this).hasClass("add")){
+                numInt = numInt + 1;
+            }
+            $(this).parents(".order-list_num").find(".order-list_numInput").val(numInt);
+        }) 
+
+        // attachment
+        let input = document.querySelector('.btn-uploadInput');
+        input.addEventListener('change',function(e){
+            let attachName = e.target.files[0].name;
+            $(".inquiry-form_attach_name").text(attachName);
+            $(".inquiry-form_attach_remark").hide();
+            $(".inquiry-form_attach_delete").show().css("display","flex");
+        });
+
+        // radio
+        $(".inquiry-form_radioList").click(function(){
+            if($(this).hasClass("active")){
+                $(this).removeClass("active");
+            }else {
+                $(this).addClass("active").siblings(".inquiry-form_radioList").removeClass("active");
+                $(this).parents("li").find(".inquiry-form_checkList").addClass("active");
+            }
+        })
+
+        // check
+        $(".inquiry-form_checkList").click(function(){
+            if($(this).hasClass("active")){
+                $(this).parents("li").find(".inquiry-form_radioList").removeClass("active");
+                $(this).removeClass("active");
+            }else {
+                $(this).addClass("active");
+            }
+        })
+
+        // clear
+        $(".btn-clear").click(function(){
+            $(".inquiry-form_content").find("input, textarea").each(function(){
+                $(this).val("");
+            })
+            $(".inquiry-form_content").find(".inquiry-form_radioList, .inquiry-form_checkList").each(function(){
+                $(this).removeClass("active");
+            })
+        })
+    </script>
 
 </body>
 </html>

@@ -6,6 +6,11 @@ $(window).on("resize scroll",function(){
         $(".header").removeClass("scroll");
     }
 })
+if($(window).scrollTop()>0){
+    $(".header").addClass("scroll");
+}else {
+    $(".header").removeClass("scroll");
+}
 
 // 搜尋
 $(".header_search_icon").click(function(){
@@ -69,4 +74,16 @@ $(".header_menu").click(function(){
 // go to top
 $(".btn-top").click(function(){
     $("html,body").animate({scrollTop:0},300);
+})
+
+// product category
+$(".category_menuBtn").click(function(){
+    $(".category_mask").fadeIn(300);
+    $(".category_menu").addClass("active");
+    $("body").css("overflow","hidden");
+})
+$(".category_mask, .category_menu_title").click(function(){
+    $(".category_mask").fadeOut(300);
+    $(".category_menu").removeClass("active");
+    $("body").css("overflow","visible");
 })

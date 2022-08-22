@@ -308,7 +308,7 @@
             &:hover {
                 border-color: #fff;
                 span {
-                    color: $main-blue;
+                    color: $main-red;
                 }
             }
         }
@@ -402,7 +402,7 @@
         transition: $common-transition;
     }
     &_bg {
-        background-color: $main-blue;
+        background-color: $main-red;
         // width: 100%;
         width: 0;
         height: 100%;
@@ -412,7 +412,7 @@
         transition: $common-transition;
     }
     &:hover {
-        border-color: $main-blue;
+        border-color: $main-red;
         span {
             color: #fff;
         }

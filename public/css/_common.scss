@@ -5,9 +5,14 @@ $main-blue:#194C9F;
 $second-blue:#C1CDE3;
 $third-blue:#273A5E;
 $gray-99:#999;
+$gray-46:#464646;
 $gray-48:#484848;
 $gray-7d:#7d7d7d;
+$gray-ec:#ececec;
+$gray-56:#565656;
+$gray-c6:#c6c6c6;
 $common-transition:0.3s;
+
 $container-padding-xxl: calc((100vw - 1320px)/2 + 20px);
 $container-padding-xl: calc((100vw - 1140px)/2 + 20px);
 $container-padding-lg: calc((100vw - 960px)/2 + 20px);
@@ -41,6 +46,19 @@ input, select, textarea, button {
     background-color: transparent;
     border-radius: 0;
     outline: none;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+}
+input[type="number"] {
+  -moz-appearance: textfield;
+}
+
+input[type=file], /* FF, IE7+, chrome (except button) */
+input[type=file]::-webkit-file-upload-button { /* chromes and blink button */
+    cursor: pointer; 
 }
 
 .container {
@@ -474,31 +492,126 @@ input, select, textarea, button {
     }
 }
 
-.btn-top {
-    position: fixed;
-    width: 40px;
-    height: 52px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    right: 40px;
-    bottom: 50px;
-    cursor: pointer;
-    z-index: 100;
-    transition: $common-transition;
-    img {
-        width: 100%;
-        filter: drop-shadow(0 1px 10px rgba(0,0,0,0.25));
-        // box-shadow: inset 0 1px 5px rgba(0,0,0,0.15);
+.btn {
+    &-top {
+        position: fixed;
+        width: 40px;
+        height: 52px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        right: 40px;
+        bottom: 70px;
+        cursor: pointer;
+        z-index: 100;
+        transition: $common-transition;
+        img {
+            width: 100%;
+            filter: drop-shadow(0 1px 10px rgba(0,0,0,0.25));
+            // box-shadow: inset 0 1px 5px rgba(0,0,0,0.15);
+        }
+        &:hover {
+            transform: scale(1.1);
+        }
     }
-    &:hover {
-        transform: scale(1.1);
+    &-iconText {
+        background-color: $gray-46;
+        padding: 5px 15px;
+        transition: $common-transition;
+        img {
+            width: 15px;
+            margin-right: 5px;
+        }
+        span {
+            font-weight: bold;
+            color: #fff;
+        }
+        &:hover {
+            background-color: $main-red;
+        }
+    }
+}
+
+.page-banner {
+    width: 100%;
+    position: relative;
+    padding-bottom: 24%;
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    h1 {
+        width: 100%;
+        text-align: center;
+        margin: 0;
+        text-shadow: 0px 4px 10px rgba(0, 0, 0, 0.35);
+        font-size: 50px;
+        font-weight: bold;
+        top: 50%;
+        position: absolute;
+        left: 0;
+        transform: translateY(-50%);
+        color: #fff;
+    }
+    &_mask {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background: rgba(25, 77, 163, 0.67);
+        top: 0;
+        left: 0;
+    }
+    &_style {
+        position: absolute;
+        width: 100%;
+        left: 0;
+        bottom: 0;
+    }
+    &-product {
+        background-image: url(../img/product-banner.png);
+    }
+}
+
+.breadcrumb {
+    padding-bottom: 30px;
+    &-item {
+        transition: $common-transition;
+        &.active {
+            color: $main-red;
+        }
+        a {
+            &:hover {
+                opacity: 0.5;
+            }
+        }
+    }
+}
+
+.breadcrumb-item + .breadcrumb-item {
+    padding-left: 30px;
+    position: relative;
+    &::before {
+        content: "";
+        width: 12px;
+        height: 12px;
+        background-image: url(../img/arrow-deepgray-right.svg);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: contain;
+        top: 50%;
+        left: 10px;
+        transform: translateY(-50%);
+        position: absolute;
     }
 }
 
 @media screen and (max-width:1199.98px) {
     .title-home {
         font-size: 38px;
+    }
+    .page-banner {
+        h1 {
+            font-size: 42px;
+        }
     }
 }
 
@@ -581,17 +694,72 @@ input, select, textarea, button {
             }
         }
     }
+    .page-banner {
+        padding-bottom: 35%;
+    }
+    .btn-top {
+        right: 20px;
+    }
 }
+
+@media screen and (max-width:767.98px) {
+    .page-banner {
+        padding-bottom: 48%;
+        h1 {
+            font-size: 36px;
+        }
+    }
+    .header {
+        >.container {
+            padding-left: 20px;
+            padding-right: 20px;
+        }
+        &_logo {
+            width: 60px;
+            padding-bottom: calc(60px * 1.29);
+        }
+        &_menu {
+            width: 28px;
+            height: 19px;
+        }
+    }
+    .breadcrumb {
+        &-item {
+            a {
+                font-size: 14px;
+            }
+        }
+    }
+}
+
+
 
 @media screen and (max-width:575.98px) {
     .title-home {
         font-size: 36px;
+    }
+    .header {
+        &_logo {
+            width: 40px;
+            padding-bottom: calc(40px * 1.29);
+        }
+    }
+    .page-banner {
+        padding-bottom: 48%;
+        h1 {
+            font-size: 32px;
+        }
     }
 }
 
 @media screen and (max-width:450px) {
     .title-home {
         font-size: 30px;
+    }
+    .page-banner {
+        h1 {
+            font-size: 28px;
+        }
     }
 }
 
