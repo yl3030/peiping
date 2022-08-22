@@ -575,6 +575,18 @@ input[type=file]::-webkit-file-upload-button { /* chromes and blink button */
     &-about {
         background-image: url(../img/about-banner.png);
     }
+    &-news {
+        background-image: url(../img/news-banner.png);
+    }
+    &-application {
+        background-image: url(../img/application-banner.png);
+    }
+    &-video {
+        background-image: url(../img/video-banner.png);
+    }
+    &-contact {
+        background-image: url(../img/contact-banner.png);
+    }
 }
 
 .breadcrumb {
@@ -641,6 +653,153 @@ input[type=file]::-webkit-file-upload-button { /* chromes and blink button */
             border-radius: $main-blue;
             span {
                 color: #fff;
+            }
+        }
+    }
+}
+
+.pagination-common {
+    margin-bottom: 100px;
+    .pagination {
+        justify-content: center;
+        .page-link {
+            color: $gray-c6;
+            font-weight: normal;
+            background-color: transparent;
+            border-radius: 5px;
+            border-color: $gray-c6;
+            transition: $common-transition;
+            &.active, &:hover {
+                border-color: $main-blue;
+                background-color: $main-blue;
+                color: #fff;
+                font-weight: bold;
+            }
+        }
+        .page-item {
+            margin-left: 4px;
+            margin-right: 4px;
+            &.prev {
+                img {
+                    transform: scaleX(-1);
+                }
+            }
+        }
+    }
+}
+
+
+.detail_pageBtn {
+    a {
+        width: 35px;
+        height: 35px;
+        border-radius: 50%;
+        background-color: #d9d9d9;
+        border: 1px solid #d9d9d9;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        margin-left: 10px;
+        transition: $common-transition;
+        &.prev {
+            transform: scaleX(-1);
+        }
+        svg {
+            width: 10px;
+            path {
+                transition: $common-transition;
+            }
+        }
+        &:hover {
+            background-color: transparent;
+            border-color: #000;
+            svg {
+                path {
+                    stroke: #000;
+                }
+            }
+        }
+    }
+}
+
+.content {
+    &_detail {
+        padding-top: 30px;
+        padding-left: 0;
+        &_inner {
+            padding-right: 0;
+            padding-bottom: 100px;
+            background-color: $gray-ec;
+        }
+        &_pic {
+            position: relative;
+            background-color: $main-blue;
+            transform: translate(-50px,-30px);
+            img {
+                position: absolute;
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                top: 0;
+                left: 0;
+                transform: translate(-10px, -10px);
+            }
+        }
+        &_text {
+            padding-top: 20px;
+            h2 {
+                font-size: 32px;
+                font-weight: bold;
+                margin-bottom: 0;
+                color: $gray-46;
+            }
+        }
+    }
+}
+
+
+.form-common {
+    label {
+        color: $gray-46;
+        margin-bottom: 5px;
+        span {
+            color: $main-red;
+        }
+    }
+    input, textarea {
+        width: 100%;
+        border: 1px solid #B1B1B1;
+        background-color: #fff;
+        padding: 5px 10px;
+    }
+    input {
+        height: 40px;
+    }
+    &_item {
+        margin-bottom: 15px;
+    }
+    &_code {
+        width: 100%;
+        border: 1px solid #B1B1B1;
+        background-color: #fff;
+        height: 40px;
+        input {
+            border: 0;
+            width: calc(100% - 50px - 45px);
+            background-color: transparent;
+        }
+        .btn-change {
+            width: 45px;
+            height: 100%;
+            padding: 5px;
+            img {
+                width: 80%;
+            }
+        }
+        &_pic {
+            width: 50px;
+            img {
+                width: 100%;
             }
         }
     }
@@ -742,6 +901,16 @@ input[type=file]::-webkit-file-upload-button { /* chromes and blink button */
     .btn-top {
         right: 20px;
     }
+    .content {
+        &_detail {
+            &_pic {
+                transform: translate(-30px,-30px);
+            }
+            &_inner {
+                padding-bottom: 50px;
+            }
+        }
+    }
 }
 
 @media screen and (max-width:767.98px) {
@@ -775,6 +944,18 @@ input[type=file]::-webkit-file-upload-button { /* chromes and blink button */
     .tab-common {
         .nav-link {
             padding: 10px 30px;  
+        }
+    }
+    .content {
+        &_detail {
+            &_text {
+                width: 100%;
+                padding: 0 20px 0 30px;
+            }
+            &_pic {
+                transform: translate(5px,-20px);
+                margin: 0 auto;
+            }
         }
     }
 }
@@ -820,10 +1001,26 @@ input[type=file]::-webkit-file-upload-button { /* chromes and blink button */
             padding-right: 2px;
         }
     }
+    .form-common {
+        input {
+            height: 35px;
+        }
+        &_item {
+            margin-bottom: 10px;
+        } 
+    }
 }
 
-
-
+@media screen and (min-width:768px) {
+    .content {
+        &_detail {
+            padding-left: 80px;
+            &_inner {
+                padding-right: 40px;
+            }
+        }
+    }
+}
 
 @media screen and (min-width:992px) {
     .nav {
@@ -835,6 +1032,14 @@ input[type=file]::-webkit-file-upload-button { /* chromes and blink button */
         }
         &_pic {
             width: calc((621px + 60px + (100vw - 960px)/2 + 20px - 120px) * 0.4);
+        }
+    }
+    .content {
+        &_detail {
+            padding-left: calc((100vw - 960px)/2 + 20px + 50px);
+            &_inner {
+                padding-right: $container-padding-lg;
+            }
         }
     }
 }
@@ -851,6 +1056,14 @@ input[type=file]::-webkit-file-upload-button { /* chromes and blink button */
             width: calc((621px + 60px + (100vw - 1140px)/2 + 20px - 120px) * 0.4);
         }
     }
+    .content {
+        &_detail {
+            padding-left: calc((100vw - 1140px)/2 + 20px + 50px);
+            &_inner {
+                padding-right: $container-padding-lg;
+            }
+        }
+    }
 }
 
 @media screen and (min-width:1400px) {
@@ -863,6 +1076,14 @@ input[type=file]::-webkit-file-upload-button { /* chromes and blink button */
         }
         &_pic {
             width: calc((621px + 60px + (100vw - 1320px)/2 + 20px - 120px) * 0.4);
+        }
+    }
+    .content {
+        &_detail {
+            padding-left: calc((100vw - 1320px)/2 + 20px + 50px);
+            &_inner {
+                padding-right: $container-padding-xxl;
+            }
         }
     }
 }
