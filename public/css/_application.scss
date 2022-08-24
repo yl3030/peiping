@@ -50,7 +50,10 @@
         margin-top: 40px;
         &_pic {
             width: 50%;
-            padding-bottom: calc(50% * 0.6);
+            .content_detail_pic_inner {
+                width: 100%;
+                padding-bottom: 60%;
+            }
         }
         &_text {
             width: 50%;
@@ -103,7 +106,6 @@
         &_detail {
             &_pic {
                 width: 90%;
-                padding-bottom: calc(90% * 0.6);
             }
             &_text {
                 width: 100%;
@@ -142,7 +144,7 @@
             .product-list-inner_pic {
                 height: 0;
                 max-width: 250px;
-                padding-bottom: 100%;
+                // padding-bottom: 100%;
                 width: 100%;
             }
         }

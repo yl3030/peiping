@@ -1,3 +1,6 @@
+// AOS
+AOS.init();
+
 // header
 $(window).on("resize scroll",function(){
     if($(window).scrollTop()>0){
@@ -75,6 +78,15 @@ $(".header_menu").click(function(){
 $(".btn-top").click(function(){
     $("html,body").animate({scrollTop:0},300);
 })
+$(window).on("scroll resize", function(){
+    let footerTop = $("footer").offset().top - $(window).height() + 70;
+    console.log(footerTop);
+    if($(window).scrollTop()>=footerTop){
+        $(".btn-top").addClass("bottom");
+    }else {
+        $(".btn-top").removeClass("bottom");
+    }
+})
 
 // product category
 $(".category_menuBtn").click(function(){
@@ -86,4 +98,14 @@ $(".category_mask, .category_menu_title").click(function(){
     $(".category_mask").fadeOut(300);
     $(".category_menu").removeClass("active");
     $("body").css("overflow","visible");
+})
+
+// add to inquiry
+$(".btn-inquiry").click(function(){
+    let inquiryNum = $(".category_inquiryNum").text();
+    let inquiryNumInt = parseInt(inquiryNum);
+    inquiryNumInt = inquiryNumInt + 1;
+    $(".category_inquiryNum").text(inquiryNumInt);
+
+    $(".inquiry-massage").fadeIn(300).delay(1000).fadeOut(300);
 })

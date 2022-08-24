@@ -161,6 +161,7 @@
                 width: 100%;
                 padding-bottom: 65%;
                 position: relative;
+                padding-right: 20px;
             }
         }
         &_linear {
@@ -212,15 +213,31 @@
             top: 0;
             left: 0;
             .swiper-slide {
-                width: calc(40%) !important;
+                // width: calc(40%) !important;
                 transition: $common-transition;
                 // padding-right: 20px;
                 display: flex;
                 align-items: flex-end;
                 padding-left: 20px;
                 padding-right: 20px;
+                .home-product_item {
+                    width: 67%;
+                    padding-bottom: calc(67% * 1.1);
+                    transition: $common-transition;
+                }
+                &-next {
+                    .home-product_item {
+                        // margin-left: auto;
+                    }
+                }
                 &-active {
-                    width: calc(60%) !important;
+                    // width: calc(60%) !important;
+                    // padding-right: 0;
+                    // padding-left: 0;
+                    .home-product_item {
+                        width: 100%;
+                        padding-bottom: 110%;
+                    }
                     .home-product {
                         &_linear {
                             opacity: 1;
@@ -360,27 +377,27 @@
         }
     }
 
-    &-bussiness {
-        padding: 135px 0;
-        background-image: url(../img/Business-bg.png);
-        background-size: cover;
-        background-position: center;
-        background-repeat: no-repeat;
-        &_text {
-            background-color: $main-blue;
-            width: 50%;
-            transform: translate(10px, 10px);
-        }
-        &_inner {
-            background-color: #fff;
-            box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-            padding: 70px;
-            transform: translate(-10px, -10px);
-            .title-home {
-                margin-bottom: 20px;
-            }
-        }
-    }
+    // &-bussiness {
+    //     padding: 135px 0;
+    //     background-image: url(../img/Business-bg.png);
+    //     background-size: cover;
+    //     background-position: center;
+    //     background-repeat: no-repeat;
+    //     &_text {
+    //         background-color: $main-blue;
+    //         width: 50%;
+    //         transform: translate(10px, 10px);
+    //     }
+    //     &_inner {
+    //         background-color: #fff;
+    //         box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    //         padding: 70px;
+    //         transform: translate(-10px, -10px);
+    //         .title-home {
+    //             margin-bottom: 20px;
+    //         }
+    //     }
+    // }
 }
 
 .btn-more {
@@ -479,11 +496,11 @@
                 padding: 30px 70px;
             }
         }
-        &-bussiness {
-            &_inner {
-                padding: 50px;
-            }
-        }
+        // &-bussiness {
+        //     &_inner {
+        //         padding: 50px;
+        //     }
+        // }
     }
 }
 
@@ -597,22 +614,22 @@
                 }
             }
         }
-        &-bussiness {
-            background-image: none;
-            padding: 0;
-            &_text {
-                transform: none;
-                background-color: transparent;
-                width: 100%;
-                padding: 50px 70px;
-            }
-            &_inner {
-                box-shadow: none;
-                background-color: transparent;
-                padding: 0;
-                transform: none;
-            }
-        }
+        // &-bussiness {
+        //     background-image: none;
+        //     padding: 0;
+        //     &_text {
+        //         transform: none;
+        //         background-color: transparent;
+        //         width: 100%;
+        //         padding: 50px 70px;
+        //     }
+        //     &_inner {
+        //         box-shadow: none;
+        //         background-color: transparent;
+        //         padding: 0;
+        //         transform: none;
+        //     }
+        // }
     }
 }
 
@@ -722,11 +739,11 @@
                 padding: 50px 30px;
             }
         }
-        &-bussiness {
-            &_text {
-                padding: 50px 30px;
-            }
-        }
+        // &-bussiness {
+        //     &_text {
+        //         padding: 50px 30px;
+        //     }
+        // }
     }
 }
 

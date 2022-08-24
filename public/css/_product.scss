@@ -70,6 +70,7 @@
             }
         }
         &-inner {
+            padding-bottom: 100px;
             .row {
                 margin-left: -30px;
                 margin-right: -30px;
@@ -298,6 +299,9 @@
         
         &_feature {
             margin-bottom: 30px;
+            // max-width: 800px;
+            // width: 100%;
+            // margin: 0 auto 30px;
             &:last-child {
                 margin-bottom: 0;
             }
@@ -348,6 +352,12 @@
     }
 }
 
+#productIntroTabContent {
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
 .category {
     position: fixed;
     top: calc(24vw + 40px);
@@ -389,6 +399,18 @@
         &:hover {
             background-color: $main-red;
         }
+        .inquiry-massage {
+            position: absolute;
+            width: fit-content;
+            padding: 10px 15px;
+            background-color: #fff;
+            left: calc(100% + 5px);
+            top: 0;
+            width: 130px;
+            border: 1px solid $gray-ec;
+            box-shadow: 0 1px 10px rgba(0,0,0,0.15);
+            display: none;
+        }
     }
     &_mask {
         position: fixed;
@@ -403,7 +425,7 @@
     }
     &_menu {
         position: fixed;
-        top: 200px;
+        top: 100px;
         // left: 0;
         left: -450px;
         width: 400px;
@@ -435,6 +457,8 @@
         }
         ul {
             padding: 5px 0;
+            max-height: calc(100vh - 100px - 50px);
+            overflow-y: auto;
             li {
                 padding: 0 30px;
                 a {
@@ -446,7 +470,7 @@
                     font-weight: normal;
                     color: $gray-7d;
                     transition: $common-transition;
-                    &:hover {
+                    &:hover, &.active {
                         color: $main-red;
                     }
                 }

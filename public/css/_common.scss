@@ -66,6 +66,10 @@ input[type=file]::-webkit-file-upload-button { /* chromes and blink button */
     padding-right: 20px;
 }
 
+main {
+    overflow: hidden;
+}
+
 .nav {
     &_bg {
         width: calc(621px + 60px + (100vw - 1320px)/2 + 20px);
@@ -140,10 +144,11 @@ input[type=file]::-webkit-file-upload-button { /* chromes and blink button */
         &_item {
             margin-left: 25px;
             >a {
-                color: #fff;
+                color: #fff !important;
                 z-index: 100;
                 position: relative;
                 transition: $common-transition;
+                cursor: pointer;
                 &::after {
                     width: 100%;
                     height: 2px;
@@ -359,11 +364,11 @@ input[type=file]::-webkit-file-upload-button { /* chromes and blink button */
             &_nav {
                 &_item {
                     >a {
-                        color: #000;
+                        color: #000 !important;
                     }
                     &:hover, &.active {
                         >a {
-                            color: $main-blue;
+                            color: $main-blue !important;
                             &::after {
                                 background-color: $main-blue;
                             }
@@ -397,6 +402,11 @@ input[type=file]::-webkit-file-upload-button { /* chromes and blink button */
                 }
                 &_list {
                     border: 1px solid #000;
+                }
+            }
+            &_menu {
+                .bar {
+                    background-color: $main-red;
                 }
             }
         }
@@ -505,13 +515,22 @@ input[type=file]::-webkit-file-upload-button { /* chromes and blink button */
         cursor: pointer;
         z-index: 100;
         transition: $common-transition;
-        img {
+        img, svg {
             width: 100%;
             filter: drop-shadow(0 1px 10px rgba(0,0,0,0.25));
-            // box-shadow: inset 0 1px 5px rgba(0,0,0,0.15);
+            .cls-1 {
+                transition: $common-transition;
+            }
         }
         &:hover {
             transform: scale(1.1);
+        }
+        &.bottom {
+            svg {
+                .cls-1 {
+                    fill: #fff;
+                }
+            }
         }
     }
     &-iconText {
@@ -732,17 +751,19 @@ input[type=file]::-webkit-file-upload-button { /* chromes and blink button */
             background-color: $gray-ec;
         }
         &_pic {
-            position: relative;
-            background-color: $main-blue;
             transform: translate(-50px,-30px);
-            img {
-                position: absolute;
-                width: 100%;
-                height: 100%;
-                object-fit: cover;
-                top: 0;
-                left: 0;
-                transform: translate(-10px, -10px);
+            &_inner {
+                position: relative;
+                background-color: $main-blue;
+                img {
+                    position: absolute;
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                    top: 0;
+                    left: 0;
+                    transform: translate(-10px, -10px);
+                }
             }
         }
         &_text {
@@ -753,6 +774,9 @@ input[type=file]::-webkit-file-upload-button { /* chromes and blink button */
                 margin-bottom: 0;
                 color: $gray-46;
             }
+        }
+        .application_pdList {
+            padding-bottom: 0;
         }
     }
 }
