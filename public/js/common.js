@@ -74,6 +74,19 @@ $(".header_menu").click(function(){
     $(".header_nav").toggleClass("active");
 })
 
+$(".header_nav_titleM").click(function(){
+    if($(this).hasClass("drop")){
+        $(".header_nav_titleM").removeClass("drop");
+        $(".header_nav_drop").slideUp(300);
+    }else {
+        $(".header_nav_titleM").removeClass("drop");
+        $(".header_nav_drop").slideUp(300);
+        $(this).addClass("drop");
+        $(this).parents(".header_nav_item").find(".header_nav_drop").slideDown(300);
+    }
+    
+})
+
 // go to top
 $(".btn-top").click(function(){
     $("html,body").animate({scrollTop:0},300);

@@ -143,7 +143,7 @@ main {
         }
         &_item {
             margin-left: 25px;
-            >a {
+            >a, >span {
                 color: #fff !important;
                 z-index: 100;
                 position: relative;
@@ -162,7 +162,7 @@ main {
                 }
             }
             &:hover, &.active {
-                >a {
+                >a, >span {
                     color: #fff;
                     &::after {
                         width: 100%;
@@ -232,6 +232,9 @@ main {
             img {
                 width: 100%;
             }
+        }
+        &_arrow {
+            display: none;
         }
     }
     &_search {
@@ -363,11 +366,11 @@ main {
             }
             &_nav {
                 &_item {
-                    >a {
+                    >a, >span {
                         color: #000 !important;
                     }
                     &:hover, &.active {
-                        >a {
+                        >a, >span {
                             color: $main-blue !important;
                             &::after {
                                 background-color: $main-blue;
@@ -605,6 +608,9 @@ main {
     }
     &-contact {
         background-image: url(../img/contact-banner.png);
+    }
+    &-qa {
+        background-image: url(../img/qa-banner.png);
     }
 }
 
@@ -857,9 +863,11 @@ main {
             height: 100vh;
             padding-top: 85px;
             transition: $common-transition;
+            overflow-y: auto;
             &_item {
-                margin-bottom: 10px;
-                >a {
+                margin-bottom: 15px;
+                // width: fit-content;
+                >a, >span {
                     width: 100%;
                     position: relative;
                     display: block;
@@ -875,6 +883,19 @@ main {
                             transform: translateY(-50%) rotate();
                         }
                     }
+                    &:hover {
+                        &::after {
+                            width: 0;
+                        }
+                        &.active {
+                            &::after {
+                                width: 100%;
+                            }
+                        }
+                    }
+                    &::after {
+                        top: 100%;
+                    }
                 }
                 a {
                     color: rgba(255, 255, 255, 0.5);
@@ -882,6 +903,38 @@ main {
             }
             &.active {
                 left: calc(100% - 300px);
+            }
+            &_drop {
+                position: static;
+                // display: block;
+                width: 100%;
+                height: auto;
+                padding: 10px 20px;
+                >ul {
+                    width: 100%;
+                    padding: 0;
+                    >li {
+                        margin-bottom: 10px;
+                        >a {
+                            font-size: 15px;
+                        }
+                    }
+                }
+            }
+            &_arrow {
+                width: 13px;
+                transition: $common-transition;
+                position: static !important;
+                transform: none !important;
+                display: block;
+            }
+            &_titleM {
+                padding-right: 20px;
+                &.drop {
+                    .header_nav_arrow {
+                        transform: rotate(90deg) !important;
+                    }
+                }
             }
         }
         &_search {
@@ -918,12 +971,47 @@ main {
                 
             }
         }
+        &.scroll {
+            .header {
+                &_menu {
+                    &.active {
+                        .bar {
+                            background-color: #fff;
+                        }
+                    }
+                }
+                &_nav {
+                    &_item {
+                        >a, span {
+                            color: #fff !important;
+                        }
+                        &.active {
+                            >a, span {
+                                color: #fff !important;
+                                &::after {
+                                    background-color: #fff;
+                                }
+                            }
+                        }
+                        &:hover {
+                            >a, span {
+                                color: #fff !important;
+                                &::after {
+                                    background-color: transparent;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
     }
     .page-banner {
         padding-bottom: 35%;
     }
     .btn-top {
         right: 20px;
+        z-index: 10;
     }
     .content {
         &_detail {
