@@ -11,13 +11,18 @@
                 margin-bottom: 20px;
             }
             &:hover {
-                transform: scale(1.1);
+                .media-list_pic {
+                    img {
+                        transform: scale(1.2);
+                    }
+                }
             }
         }
         &_pic {
             width: 25%;
             padding-bottom: calc(25% * 0.7067);
             position: relative;
+            overflow: hidden;
             img {
                 position: absolute;
                 width: 100%;
@@ -25,6 +30,7 @@
                 object-fit: cover;
                 top: 0;
                 left: 0;
+                transition: 0.5s;
             }
         }
         &_text {

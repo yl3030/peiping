@@ -83,14 +83,19 @@
             &_item {
                 padding: 15px 20px 15px 0;
                 background-color: $gray-ec;
+                border: 1px solid $gray-ec;
                 // margin-bottom: 25px;
                 height: 100%;
                 transition: $common-transition;
                 &:hover {
                     background-color: #fff;
                     box-shadow: 4px 4px 10px rgba(0,0,0,0.15);
+                    // border: 1px solid $main-blue;
                     .product-list-inner_pic {
                         transform: translateX(-25px) scale(1.1);
+                        img {
+                            border-color: $main-blue;
+                        }
                     }
                 }
             }
@@ -1003,7 +1008,8 @@
             justify-content: center;
         }
         &_menuBtn {
-            width: calc(100% - 50px);
+            // width: calc(100% - 50px);
+            width: 100%;
             border-bottom: 0;
             border-right: 1px solid #6085C2;
             display: flex;
