@@ -203,7 +203,7 @@ main {
             display: none;
             // opacity: 0;
             // visibility: hidden;
-            transition: 0.3s;
+            // transition: 0.3s;
             background-color: #fff;
 
 
@@ -1224,6 +1224,12 @@ main {
                         }
                     }
                 }
+                &:hover {
+                    .header_nav_drop {
+                        display: none;
+                    }
+                }
+                
             }
             &.active {
                 left: calc(100% - 300px);

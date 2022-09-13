@@ -183,8 +183,6 @@ main {
 
 .header_nav_drop {
   display: none;
-  -webkit-transition: 0.3s;
-  transition: 0.3s;
   background-color: #fff;
   position: absolute;
   width: 150px;
@@ -1343,6 +1341,9 @@ main {
   }
   .header_nav_item.active > a:hover::after, .header_nav_item.active > span:hover::after {
     width: calc(100% - 40px);
+  }
+  .header_nav_item:hover .header_nav_drop {
+    display: none;
   }
   .header_nav.active {
     left: calc(100% - 300px);
