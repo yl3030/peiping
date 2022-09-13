@@ -139,6 +139,10 @@ main {
   color: #fff;
 }
 
+.header_nav_item {
+  position: relative;
+}
+
 .header_nav_item > a, .header_nav_item > span {
   color: #fff !important;
   z-index: 100;
@@ -156,7 +160,7 @@ main {
   background-color: #fff;
   position: absolute;
   content: "";
-  top: calc(100% + 5px);
+  top: calc(100%);
   left: 50%;
   -webkit-transform: translateX(-50%);
           transform: translateX(-50%);
@@ -174,62 +178,64 @@ main {
 }
 
 .header_nav_item:hover .header_nav_drop {
-  opacity: 1;
-  visibility: visible;
+  display: block;
 }
 
 .header_nav_drop {
-  position: fixed;
-  width: calc(786px + 60px + (100vw - 1320px)/2 + 20px);
-  height: calc(100vh - 50px);
-  padding: 50px 80px 40px;
-  top: 50px;
-  right: 0;
-  display: block;
-  opacity: 0;
-  visibility: hidden;
-  -webkit-transition: 0.1s;
-  transition: 0.1s;
+  display: none;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  background-color: #fff;
+  position: absolute;
+  width: 150px;
+  left: 0;
+  top: 100%;
+  background-color: transparent;
+  padding: 10px 0 0 0;
 }
 
 .header_nav_drop > ul {
-  width: 60%;
-  padding-right: 50px;
+  background-color: rgba(255, 255, 255, 0.9);
+  padding: 25px;
+  -webkit-box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+          box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
 }
 
 .header_nav_drop > ul > li {
-  margin-bottom: 10px;
+  margin-bottom: 13px;
 }
 
 .header_nav_drop > ul > li > a {
   font-size: 20px;
   font-weight: normal;
-  color: rgba(255, 255, 255, 0.4);
   -webkit-transition: 0.3s;
   transition: 0.3s;
   display: block;
   width: 100%;
+  font-size: 16px;
 }
 
 .header_nav_drop > ul > li:hover > a {
-  color: #fff;
   font-weight: bold;
+  color: #194C9F;
 }
 
-.header_nav_drop > ul > li:hover .header_nav_pic {
-  opacity: 1;
+.header_nav_drop > ul > li:last-child {
+  margin-bottom: 0;
 }
 
-.header_nav_drop.active {
-  opacity: 1;
-  visibility: visible;
+.header_nav_drop.nav-big {
+  width: 380px;
+}
+
+.header_nav_drop.nav-medium {
+  width: 250px;
 }
 
 .header_nav_seconddrop {
   padding-top: 10px;
   padding-left: 30px;
   padding-bottom: 10px;
-  display: none;
 }
 
 .header_nav_seconddrop > li {
@@ -237,15 +243,14 @@ main {
 }
 
 .header_nav_seconddrop > li a {
-  font-size: 18px;
+  font-size: 14px;
   font-weight: normal;
-  color: rgba(255, 255, 255, 0.4);
   -webkit-transition: 0.3s;
   transition: 0.3s;
 }
 
 .header_nav_seconddrop > li:hover a {
-  color: #fff;
+  color: #194C9F;
   font-weight: bold;
 }
 
@@ -454,6 +459,16 @@ main {
 
 .header.scroll .header_nav_item:hover > a::after, .header.scroll .header_nav_item:hover > span::after, .header.scroll .header_nav_item.active > a::after, .header.scroll .header_nav_item.active > span::after {
   background-color: #194C9F;
+}
+
+.header.scroll .header_nav_drop ul {
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  background-color: #194C9F;
+}
+
+.header.scroll .header_nav_drop ul li a {
+  color: #fff;
 }
 
 .header.scroll .header_search_icon path {
@@ -1334,7 +1349,7 @@ main {
   }
   .header_nav_drop {
     position: static;
-    width: 100%;
+    width: 100% !important;
     height: auto;
     padding: 10px 20px;
     display: none;
@@ -1345,7 +1360,10 @@ main {
   }
   .header_nav_drop > ul {
     width: 100%;
-    padding: 0;
+    padding: 0 0 0 15px;
+    background-color: transparent;
+    -webkit-box-shadow: none;
+            box-shadow: none;
   }
   .header_nav_drop > ul > li {
     margin-bottom: 10px;
@@ -1561,9 +1579,6 @@ main {
   .content_detail_inner {
     padding-right: calc((100vw - 960px)/2 + 20px);
   }
-  .header_nav_drop {
-    width: calc(786px + 60px + (100vw - 960px)/2 + 20px);
-  }
 }
 
 @media screen and (min-width: 1200px) {
@@ -1582,9 +1597,6 @@ main {
   .content_detail_inner {
     padding-right: calc((100vw - 960px)/2 + 20px);
   }
-  .header_nav_drop {
-    width: calc(786px + 60px + (100vw - 1140px)/2 + 20px);
-  }
 }
 
 @media screen and (min-width: 1400px) {
@@ -1602,9 +1614,6 @@ main {
   }
   .content_detail_inner {
     padding-right: calc((100vw - 1320px)/2 + 20px);
-  }
-  .header_nav_drop {
-    width: calc(786px + 60px + (100vw - 1320px)/2 + 20px);
   }
 }
 
