@@ -868,11 +868,65 @@ main {
 
 .tab-common .nav-link.active, .tab-common .nav-link:hover {
   background-color: #194C9F;
-  border-radius: #194C9F;
+  border-color: #194C9F;
 }
 
 .tab-common .nav-link.active span, .tab-common .nav-link:hover span {
   color: #fff;
+}
+
+.tab-class-m {
+  margin-bottom: 40px;
+  display: none;
+}
+
+.tab-class-m_inner {
+  position: relative;
+}
+
+.tab-class_active {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 10px 15px;
+  border: 1px solid #000;
+}
+
+.tab-class_active span {
+  font-size: 16px;
+}
+
+.tab-class_active img {
+  width: 20px;
+  -webkit-transform: rotate(90deg);
+          transform: rotate(90deg);
+}
+
+.tab-class_hide {
+  position: absolute;
+  width: 100%;
+  left: 0;
+  top: calc(100% + 5px);
+  background-color: #fff;
+  border: 1px solid #000;
+  padding: 8px 15px;
+  z-index: 20;
+  display: none;
+}
+
+.tab-class_hide li {
+  padding: 8px 0;
+}
+
+.tab-class_hide li.active {
+  color: #194C9F;
 }
 
 .pagination-common {
@@ -1462,6 +1516,12 @@ main {
     width: 100%;
     margin-bottom: 10px;
     padding: 0;
+  }
+  .tab-class {
+    display: none;
+  }
+  .tab-class-m {
+    display: block;
   }
 }
 
@@ -4020,6 +4080,48 @@ main {
     padding-left: 20px;
     padding-bottom: 50px;
   }
+  #productIntroTab, #newsTab {
+    padding: 0;
+    width: 100%;
+    overflow-x: hidden;
+  }
+  #productIntroTab .nav-item, #newsTab .nav-item {
+    width: 33.3333%;
+    padding: 0;
+  }
+  #productIntroTab .nav-link, #newsTab .nav-link {
+    padding: 10px 0;
+    width: 100%;
+    -webkit-transform: none;
+            transform: none;
+    border: 0;
+  }
+  #productIntroTab .nav-link span, #newsTab .nav-link span {
+    -webkit-transform: none;
+            transform: none;
+  }
+  #productIntroTab .nav-link.active, #newsTab .nav-link.active {
+    background-color: transparent;
+    border-bottom: 3px solid #194C9F;
+  }
+  #productIntroTab .nav-link.active span, #newsTab .nav-link.active span {
+    color: #194C9F;
+  }
+  #newsTab .nav-link {
+    height: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  #newsTab .nav-link span {
+    font-size: 14px;
+  }
 }
 
 @media screen and (min-width: 576px) {
@@ -4904,6 +5006,10 @@ main {
   font-size: 24px;
 }
 
+#videoTabContent {
+  padding-top: 10px;
+}
+
 @media screen and (max-width: 991.98px) {
   .video_item {
     padding-left: 15px;
@@ -5001,12 +5107,10 @@ main {
 .contact_inform {
   position: absolute;
   width: 40%;
-  top: 50%;
+  top: 84px;
   right: 0;
   background-color: #194C9F;
   color: #fff;
-  -webkit-transform: translateY(-50%);
-          transform: translateY(-50%);
   padding-top: 50px;
   padding-left: 20px;
   padding-bottom: 50px;
@@ -5040,8 +5144,10 @@ main {
 
 .contact_map {
   width: 100%;
-  padding-bottom: 25%;
+  padding-bottom: 35%;
   position: relative;
+  margin-top: 40px;
+  border: 1px solid #B7B7B7;
 }
 
 .contact_map iframe {
@@ -5064,6 +5170,10 @@ main {
     width: 100%;
     -webkit-transform: none;
             transform: none;
+    background-color: #464646;
+  }
+  .contact_inform_item {
+    border-color: #767676;
   }
   .contact_map {
     padding-bottom: 35%;

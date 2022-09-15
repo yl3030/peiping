@@ -24,11 +24,12 @@
     &_inform {
         position: absolute;
         width: 40%;
-        top: 50%;
+        // top: 50%;
+        top: 84px;
         right: 0;
         background-color: $main-blue;
         color: #fff;
-        transform: translateY(-50%);
+        // transform: translateY(-50%);
         padding-top: 50px;
         padding-left: 20px;
         padding-bottom: 50px;
@@ -53,9 +54,11 @@
     }
     &_map {
         width: 100%;
-        padding-bottom: 25%;
+        padding-bottom: 35%;
         position: relative;
         // opacity: 0.5;
+        margin-top: 40px;
+        border: 1px solid #B7B7B7;
         iframe {
             position: absolute;
             width: 100%;
@@ -76,6 +79,10 @@
             position: static;
             width: 100%;
             transform: none;
+            background-color: $gray-46;
+            &_item {
+                border-color: #767676;
+            }
         }
         &_map {
             padding-bottom: 35%;

@@ -784,38 +784,81 @@ main {
     }
 }
 
-.tab-common {
-    background-color: transparent;
-    justify-content: center;
-    border: 0;
-    margin-bottom: 35px;
-    overflow-x: auto;
-    flex-wrap: nowrap;
-    padding: 0 20px 10px;
-    .nav-item {
-        padding-left: 5px;
-        padding-right: 5px;
-    }
-    .nav-link {
-        border: 1px solid $gray-46;
-        padding: 10px 65px;
-        border-radius: 0;
-        transform: skew(-15deg);
-        transition: $common-transition;
-        span {
-            color: $gray-46;
-            font-weight: bold;
-            transform: skew(15deg);
-            display: block;
-            transition: $common-transition;
-            white-space: nowrap;
+.tab {
+    &-common {
+        background-color: transparent;
+        justify-content: center;
+        border: 0;
+        margin-bottom: 35px;
+        overflow-x: auto;
+        flex-wrap: nowrap;
+        padding: 0 20px 10px;
+        .nav-item {
+            padding-left: 5px;
+            padding-right: 5px;
         }
-        &.active, &:hover {
-            background-color: $main-blue;
-            border-radius: $main-blue;
+        .nav-link {
+            border: 1px solid $gray-46;
+            padding: 10px 65px;
+            border-radius: 0;
+            transform: skew(-15deg);
+            transition: $common-transition;
             span {
-                color: #fff;
+                color: $gray-46;
+                font-weight: bold;
+                transform: skew(15deg);
+                display: block;
+                transition: $common-transition;
+                white-space: nowrap;
             }
+            &.active, &:hover {
+                background-color: $main-blue;
+                border-color: $main-blue;
+                span {
+                    color: #fff;
+                }
+            }
+        }
+    }
+    &-class {
+        &-m {
+            margin-bottom: 40px;
+            display: none;
+            &_inner {
+                position: relative;
+            }
+        }
+        &_active {
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 10px 15px;
+            border: 1px solid #000;
+            span {
+                font-size: 16px;
+            }
+            img {
+                width: 20px;
+                transform: rotate(90deg);
+            }
+        }
+        &_hide {
+            position: absolute;
+            width: 100%;
+            left: 0;
+            top: calc(100% + 5px);
+            background-color: #fff;
+            border: 1px solid #000;
+            padding: 8px 15px;
+            z-index: 20;
+            display: none;
+            li {
+                padding: 8px 0;
+                &.active {
+                    color: $main-blue;
+                }
+            } 
         }
     }
 }
@@ -1369,6 +1412,14 @@ main {
             width: 100%;
             margin-bottom: 10px;
             padding: 0;
+        }
+    }
+    .tab {
+        &-class {
+            display: none;
+            &-m {
+                display: block;
+            }
         }
     }
 }

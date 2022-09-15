@@ -1069,6 +1069,42 @@
             padding-bottom: 50px;
         }
     }
+    #productIntroTab, #newsTab {
+        padding: 0;
+        width: 100%;
+        overflow-x: hidden;
+        .nav-item {
+            width: 33.3333%;
+            padding: 0;
+        }
+        .nav-link {
+            padding: 10px 0;
+            width: 100%;
+            transform: none;
+            border: 0;
+            span {
+                transform: none;
+            }
+            &.active {
+                background-color: transparent;
+                border-bottom: 3px solid $main-blue;
+                span {
+                    color: $main-blue;
+                }
+            }
+        }
+    }
+    #newsTab {
+        .nav-link {
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            span {
+                font-size: 14px;
+            }
+        }
+    }
 }
 
 @media screen and (min-width:576px) {

@@ -154,3 +154,28 @@ $(".cookies_close, .btn-decline, .btn-accept").click(function(){
 //         $(this).parents(".cookies").css("bottom",bottom).css("opacity","0");
 //     })
 // })
+
+$(".tab-class_active").click(function(){
+    $(this).parents(".tab-class-m_inner").find(".tab-class_hide").slideToggle(300);
+})
+
+$(".tab-class_hide li").click(function(){
+    $(this).parents(".tab-class_hide").slideUp(300);
+    $(this).addClass("active").siblings("li").removeClass("active");
+    let targetTab = $(this).data("tab");
+    let targetTabContent = $(this).attr("data-tabContent");
+    $(targetTab).addClass("active");
+    $(targetTab).parents(".nav-item").siblings(".nav-item").find(".nav-link").removeClass("active");
+    $(targetTabContent).addClass("show active").siblings(".tab-pane").removeClass("show").removeClass("active");
+
+    let activeName = $(this).text();
+    $(".tab-class_active span").text(activeName);
+})
+
+$(window).on("resize scroll",function(){
+    let tabClassActive = $(".tab-class").find(".nav-link.active").find("span").text();
+    $(".tab-class_active").find("span").text(tabClassActive);
+    let activeItem = $(".tab-class").find(".nav-link.active").parents(".nav-item");
+    let activeIndex = $(".nav-item").index(activeItem);
+    $(".tab-class_hide").find("li").eq(activeIndex).addClass("active").siblings("li").removeClass("active");
+})
