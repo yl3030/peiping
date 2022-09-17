@@ -387,18 +387,20 @@
     </div>
 
 
-    <div class="modal fade videoPopup" id="videoPopup" tabindex="-1" aria-labelledby="videoPopupLabel" aria-hidden="true">
+    <div class="modal fade videoPopup" id="videoPopup" tabindex="-1" aria-labelledby="videoPopupLabel" aria-hidden="true" onclick="stop()">
         <div class="modal-dialog">
           <div class="modal-content">
             <div class="modal-body">
               <div class="videoPopup_main">
-                  <video id="popupVideo" src=""></video>
-                    <img onclick="playpause()" src="../public/img/icon-video.svg" alt="">
+                <div class="videoPopup_content active" id="popupVideo1"></div>
+                <div class="videoPopup_content" id="popupVideo2"></div>
+                <div class="videoPopup_content" id="popupVideo3"></div>
+                <div class="videoPopup_content" id="popupVideo4"></div>
               </div>
               <p class="videoPopup_name"></p>
               <button class="videoPopup_close" data-bs-dismiss="modal"><img src="../public/img/icon-close-white.svg" alt=""></button>
-              <button class="videoPopup_arrow prev"><img src="../public/img/arrow-deepgray-right.svg" alt=""></button>
-              <button class="videoPopup_arrow next"><img src="../public/img/arrow-deepgray-right.svg" alt=""></button>
+              <!-- <button class="videoPopup_arrow prev"><img src="../public/img/arrow-deepgray-right.svg" alt=""></button> -->
+              <!-- <button class="videoPopup_arrow next"><img src="../public/img/arrow-deepgray-right.svg" alt=""></button> -->
             </div>
           </div>
         </div>
@@ -425,57 +427,114 @@
             }
         )
 
+        // youtube
+        var tag = document.createElement("script");
+
+        tag.src = "https://www.youtube.com/iframe_api";
+        var firstScriptTag = document.getElementsByTagName("script")[0];
+        firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+
+        var done = false;
+        function onPlayerStateChange(event) {
+            if (event.data == YT.PlayerState.PLAYING && !done) {
+                setTimeout(stopVideo, 6000);
+                done = true;
+            }
+        }
+        function stopVideo() {
+            player.stopVideo();
+        }
+
+        var video1,video2,video3,video4;
+
+        function onYouTubeIframeAPIReady() {
+            video1 = new YT.Player("popupVideo1", {
+                videoId: 'SgUjftmFB4U',
+                events: {
+                    onReady: stopVideo,
+                },
+            });
+            video2 = new YT.Player("popupVideo2", {
+                videoId: '7PKviPmhS98',
+                events: {
+                    onReady: stopVideo,
+                },
+            });
+            video3 = new YT.Player("popupVideo3", {
+                videoId: 'GKquUwHLkHc',
+                events: {
+                    onReady: stopVideo,
+                },
+            });
+            video4 = new YT.Player("popupVideo4", {
+                videoId: 'feLd0ap7si8',
+                events: {
+                    onReady: stopVideo,
+                },
+            });
+        }
+
+        function stop() {
+            video.stopVideo();
+        }
+
+        function onPlayer(event) {
+            event.target.playVideo();
+        }
+
         // popup
         let index, indexInt, length;
         $(".video_item").click(function(){
-            let src = $(this).find(".video_mainPic").attr("src");
-            $(".videoPopup_main>video").attr("src",src);
+            // let src = $(this).find(".video_mainPic").attr("src");
+            // $(".videoPopup_main>video").attr("src",src);
 
             index = $(".video_item").index(this);
             indexInt = parseInt(index);
-            length = $(".video_item").length;
+            // length = $(".video_item").length;
+
+            $(".videoPopup_content").eq(index).addClass("active").siblings(".videoPopup_content").removeClass("active");
 
             let name = $(this).find("p").text();
             $(".videoPopup_name").text(name);
         })
 
-        let newSRC, newName;
-        $(".videoPopup_arrow").click(function(){
-                if($(this).hasClass("prev")){
-                    if(indexInt > 0){
-                        indexInt = indexInt - 1;
-                        newSRC = $(".video_item").eq(indexInt).find(".video_mainPic").attr("src");
-                        newName = $(".video_item").eq(indexInt).find("p").text();
-                        $(".videoPopup_main>video").attr("src",newSRC);
-                        $(".videoPopup_name").text(newName);
-                    }
-                }else if($(this).hasClass("next")) {
-                    if(indexInt < length-1){
-                        indexInt = indexInt + 1;
-                        newSRC = $(".video_item").eq(indexInt).find(".video_mainPic").attr("src");
-                        newName = $(".video_item").eq(indexInt).find("p").text();
-                        $(".videoPopup_main>video").attr("src",newSRC);
-                        $(".videoPopup_name").text(newName);
-                    }
-                }
-            })
+        // let newSRC, newName;
+        // $(".videoPopup_arrow").click(function(){
+        //     if($(this).hasClass("prev")){
+        //         if(indexInt > 0){
+        //             indexInt = indexInt - 1;
+        //             newSRC = $(".video_item").eq(indexInt).find(".video_mainPic").attr("src");
+        //             newName = $(".video_item").eq(indexInt).find("p").text();
+        //             $(".videoPopup_main>video").attr("src",newSRC);
+        //             $(".videoPopup_name").text(newName);
+        //         }
+        //     }else if($(this).hasClass("next")) {
+        //         if(indexInt < length-1){
+        //             indexInt = indexInt + 1;
+        //             newSRC = $(".video_item").eq(indexInt).find(".video_mainPic").attr("src");
+        //             newName = $(".video_item").eq(indexInt).find("p").text();
+        //             $(".videoPopup_main>video").attr("src",newSRC);
+        //             $(".videoPopup_name").text(newName);
+        //         }
+        //     }
+        // })
 
         // video
-        let video = document.getElementById("popupVideo");
-        function playpause(){
-            if(video.paused){
-                video.play();
-                $(".videoPopup_main").addClass("playing");
-            }else {
-                video.pause();
-                $(".videoPopup_main").removeClass("playing");
-            }
-        }
+        // let video = document.getElementById("popupVideo");
+        // function playpause(){
+        //     if(video.paused){
+        //         video.play();
+        //         $(".videoPopup_main").addClass("playing");
+        //     }else {
+        //         video.pause();
+        //         $(".videoPopup_main").removeClass("playing");
+        //     }
+        // }
 
-        $(".videoPopup_close").click(function(){
-            video.pause();
-            $(".videoPopup_main").removeClass("playing");
-        })
+        // $(".videoPopup_close").click(function(){
+        //     video.pause();
+        //     $(".videoPopup_main").removeClass("playing");
+        // })
     </script>
 
 </body>
