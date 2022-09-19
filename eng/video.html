@@ -284,7 +284,7 @@
                 <div class="video">
                     <div class="grid">
                         <div class="grid-sizer"></div> 
-                        <div class="video_item" data-bs-toggle="modal" data-bs-target="#videoPopup" data-video="#popupVideo1">
+                        <div class="video_item" data-bs-toggle="modal" data-bs-target="#videoPopup" data-video="#popupVideo1" onclick="onPlayer(event)">
                             <div class="video_pic">
                                 <div class="video_pic_inner">
                                     <video class="video_mainPic" src="../public/video/video1.mov"></video>
@@ -294,7 +294,7 @@
                             </div>
                             <p>Phasellus finibus ultrices molestie.</p>
                         </div>
-                        <div class="video_item" data-bs-toggle="modal" data-bs-target="#videoPopup" data-video="#popupVideo2">
+                        <div class="video_item" data-bs-toggle="modal" data-bs-target="#videoPopup" data-video="#popupVideo2" onclick="onPlayer(event)">
                             <div class="video_pic">
                                 <div class="video_pic_inner">
                                     <video class="video_mainPic" src="../public/video/video2.mov"></video>
@@ -304,7 +304,7 @@
                             </div>
                             <p>Phasellus molestie.</p>
                         </div>
-                        <div class="video_item" data-bs-toggle="modal" data-bs-target="#videoPopup" data-video="#popupVideo3">
+                        <div class="video_item" data-bs-toggle="modal" data-bs-target="#videoPopup" data-video="#popupVideo3" onclick="onPlayer(event)">
                             <div class="video_pic">
                                 <div class="video_pic_inner">
                                     <video class="video_mainPic" src="../public/video/video2.mov"></video>
@@ -314,7 +314,7 @@
                             </div>
                             <p>ultrices molestie.</p>
                         </div>
-                        <div class="video_item" data-bs-toggle="modal" data-bs-target="#videoPopup" data-video="#popupVideo4">
+                        <div class="video_item" data-bs-toggle="modal" data-bs-target="#videoPopup" data-video="#popupVideo4" onclick="onPlayer(event)">
                             <div class="video_pic">
                                 <div class="video_pic_inner">
                                     <video class="video_mainPic" src="../public/video/video1.mov"></video>
@@ -428,16 +428,16 @@
         )
 
          // popup
-        $(".video_item").click(function(){
+         $(".video_item").click(function(){
 
             let dataVideo = $(this).attr("data-video");
-            console.log(dataVideo);
             $(dataVideo).addClass("active").siblings(".videoPopup_content").removeClass("active");
 
             let name = $(this).find("p").text();
             $(".videoPopup_name").text(name);
         })
 
+        
         // youtube
         var tag = document.createElement("script");
 
@@ -486,12 +486,16 @@
         }
 
         function stop() {
-            video.stopVideo();
+            video1.stopVideo();
+            video2.stopVideo();
+            video3.stopVideo();
+            video4.stopVideo();
         }
 
         function onPlayer(event) {
             event.target.playVideo();
         }
+
 
        
 
