@@ -284,7 +284,7 @@
                 <div class="video">
                     <div class="grid">
                         <div class="grid-sizer"></div> 
-                        <div class="video_item" data-bs-toggle="modal" data-bs-target="#videoPopup">
+                        <div class="video_item" data-bs-toggle="modal" data-bs-target="#videoPopup" data-video="#popupVideo1">
                             <div class="video_pic">
                                 <div class="video_pic_inner">
                                     <video class="video_mainPic" src="../public/video/video1.mov"></video>
@@ -294,7 +294,7 @@
                             </div>
                             <p>Phasellus finibus ultrices molestie.</p>
                         </div>
-                        <div class="video_item" data-bs-toggle="modal" data-bs-target="#videoPopup">
+                        <div class="video_item" data-bs-toggle="modal" data-bs-target="#videoPopup" data-video="#popupVideo2">
                             <div class="video_pic">
                                 <div class="video_pic_inner">
                                     <video class="video_mainPic" src="../public/video/video2.mov"></video>
@@ -304,7 +304,7 @@
                             </div>
                             <p>Phasellus molestie.</p>
                         </div>
-                        <div class="video_item" data-bs-toggle="modal" data-bs-target="#videoPopup">
+                        <div class="video_item" data-bs-toggle="modal" data-bs-target="#videoPopup" data-video="#popupVideo3">
                             <div class="video_pic">
                                 <div class="video_pic_inner">
                                     <video class="video_mainPic" src="../public/video/video2.mov"></video>
@@ -314,7 +314,7 @@
                             </div>
                             <p>ultrices molestie.</p>
                         </div>
-                        <div class="video_item" data-bs-toggle="modal" data-bs-target="#videoPopup">
+                        <div class="video_item" data-bs-toggle="modal" data-bs-target="#videoPopup" data-video="#popupVideo4">
                             <div class="video_pic">
                                 <div class="video_pic_inner">
                                     <video class="video_mainPic" src="../public/video/video1.mov"></video>
@@ -427,6 +427,17 @@
             }
         )
 
+         // popup
+        $(".video_item").click(function(){
+
+            let dataVideo = $(this).attr("data-video");
+            console.log(dataVideo);
+            $(dataVideo).addClass("active").siblings(".videoPopup_content").removeClass("active");
+
+            let name = $(this).find("p").text();
+            $(".videoPopup_name").text(name);
+        })
+
         // youtube
         var tag = document.createElement("script");
 
@@ -449,7 +460,7 @@
 
         function onYouTubeIframeAPIReady() {
             video1 = new YT.Player("popupVideo1", {
-                videoId: 'SgUjftmFB4U',
+                videoId: 'ERumF8gI_pE',
                 events: {
                     onReady: stopVideo,
                 },
@@ -482,21 +493,7 @@
             event.target.playVideo();
         }
 
-        // popup
-        let index, indexInt, length;
-        $(".video_item").click(function(){
-            // let src = $(this).find(".video_mainPic").attr("src");
-            // $(".videoPopup_main>video").attr("src",src);
-
-            index = $(".video_item").index(this);
-            indexInt = parseInt(index);
-            // length = $(".video_item").length;
-
-            $(".videoPopup_content").eq(index).addClass("active").siblings(".videoPopup_content").removeClass("active");
-
-            let name = $(this).find("p").text();
-            $(".videoPopup_name").text(name);
-        })
+       
 
         // let newSRC, newName;
         // $(".videoPopup_arrow").click(function(){
