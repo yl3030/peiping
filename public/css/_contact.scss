@@ -42,13 +42,15 @@
             &:last-child {
                 border: 0;
             }
-            img {
+            svg {
                 width: 25px;
             }
-            span {
+            a {
                 font-weight: normal;
                 width: calc(100% - 25px);
                 padding-left: 25px;
+                display: block;
+                color: #fff;
             }
         }
     }
@@ -56,7 +58,6 @@
         width: 100%;
         padding-bottom: 35%;
         position: relative;
-        // opacity: 0.5;
         margin-top: 40px;
         border: 1px solid #B7B7B7;
         iframe {
@@ -74,14 +75,26 @@
         padding-right: 0;
         &_inner {
             width: 100%;
+            background-color: transparent;
+            padding-bottom: 45px;
         }
         &_inform {
             position: static;
             width: 100%;
             transform: none;
-            background-color: $gray-46;
+            // background-color: $gray-46;
+            background-color: transparent;
+            padding-top: 0;
             &_item {
-                border-color: #767676;
+                border-color: #9d9d9d;
+                svg {
+                    path {
+                        fill: $main-blue;
+                    }
+                }
+                a {
+                    color: $gray-48 !important;
+                }
             }
         }
         &_map {

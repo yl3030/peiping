@@ -47,13 +47,13 @@
         }
     }
     &_detail {
-        padding-left: calc((100vw - 960px)/2 + 20px + 40px);
+        // padding-left: calc((100vw - 960px)/2 + 20px + 40px);
         margin-top: 40px;
         &_pic {
-            width: 50%;
+            // width: 50%;
             .content_detail_pic_inner {
                 width: 100%;
-                padding-bottom: 60%;
+                // padding-bottom: 60%;
             }
         }
         &_text {
@@ -66,12 +66,13 @@
         }
     }
     &_pdList {
-        padding-left: 40px;
-        padding-top: 40px;
-
-        
+        // padding-left: 40px;
+        // padding-top: 40px;
+        width: 100%;
+        padding-bottom: 100px;
         .product-list-inner_item {
             border: 1px solid $gray-c6;
+            background-color: transparent;
         }
         .product-list-inner_text {
             h2 {
@@ -89,7 +90,7 @@
 @media screen and (max-width:1199.98px) {
     .application {
         &_pdList {
-            padding-left: 80px;
+            // padding-left: 80px;
         }
     }
 }
@@ -98,6 +99,11 @@
     .application {
         &_name {
             margin-bottom: 15px;
+        }
+        &_pdList {
+            >.container {
+                max-width: inherit;
+            }
         }
     }
 }
@@ -130,23 +136,33 @@
             }
         }
         &_pdList {
-            padding-left: 20px;
-            padding-right: 20px;
-            .product-list-inner_text {
-                p {
-                    margin-bottom: 20px;
-                }
-            }
+            // padding-left: 20px;
+            // padding-right: 20px;
             .row {
                 >div {
                     margin-bottom: 30px;
                 }
             }
-            .product-list-inner_pic {
-                height: 0;
-                max-width: 250px;
-                // padding-bottom: 100%;
-                width: 100%;
+            .product-list-inner {
+                &_text {
+                    background-color: transparent;
+                    p {
+                        margin-bottom: 20px;
+                    }
+                }
+                &_pic {
+                    height: 0;
+                    max-width: 250px;
+                    width: 100%;
+                    img {
+                        border: 1;
+                        border: 0;
+                        box-shadow: none;
+                    }
+                }
+                &_item {
+                    background-color: #fff;
+                }
             }
         }
     }

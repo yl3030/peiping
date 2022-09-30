@@ -69,10 +69,11 @@
     margin: 0 auto;
     &_detail {
         &_pic {
-            width: 40%;
+            // width: 40%;
+            width: 100%;
             .content_detail_pic_inner {
                 width: 100%;
-                padding-bottom: 70.67%;
+                // padding-bottom: 75%;
             }
         }
         &_content {
@@ -81,7 +82,13 @@
             font-weight: normal;
         }
         &_text {
-            width: 60%;
+            width: 100%;
+        }
+        &_inner {
+            max-width: 890px;
+            width: 100%;
+            margin: 0 auto;
+            padding: 0 20px;
         }
     }
 }
@@ -120,7 +127,7 @@
     .news {
         &_detail {
             &_pic {
-                width: 90%;
+                // width: 90%;
                 // padding-bottom: calc(90% * 0.7067);
             }
             &_text {

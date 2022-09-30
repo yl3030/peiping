@@ -931,29 +931,34 @@ main {
     &_detail {
         padding-top: 30px;
         padding-left: 0;
+        background-image: url(../img/news-bg.png);
+        background-size: cover;
+        background-position: center top;
+        background-repeat: no-repeat;
         &_inner {
-            padding-right: 0;
-            padding-bottom: 100px;
-            background-color: $gray-ec;
+            // padding-right: 0;
+            // padding-bottom: 100px;
+            // background-color: $gray-ec;
         }
         &_pic {
-            transform: translate(-50px,-30px);
+            // transform: translate(-50px,-30px);
             &_inner {
-                position: relative;
-                background-color: $main-blue;
+                // position: relative;
+                // background-color: $main-blue;
                 img {
-                    position: absolute;
+                    // position: absolute;
                     width: 100%;
-                    height: 100%;
-                    object-fit: cover;
-                    top: 0;
-                    left: 0;
-                    transform: translate(-10px, -10px);
+                    // height: 100%;
+                    // object-fit: cover;
+                    // top: 0;
+                    // left: 0;
+                    // transform: translate(-10px, -10px);
                 }
             }
         }
         &_text {
             padding-top: 20px;
+            padding-bottom: 100px;
             h2 {
                 font-size: 32px;
                 font-weight: bold;
@@ -961,9 +966,9 @@ main {
                 color: $gray-46;
             }
         }
-        .application_pdList {
-            padding-bottom: 0;
-        }
+        // .application_pdList {
+        //     padding-bottom: 0;
+        // }
     }
 }
 
@@ -1022,7 +1027,6 @@ main {
         height: 37px;
         display: block;
         transition: $common-transition;
-        // margin-top: 10px;
         &:hover {
             background: transparent;
             color: #fff;
@@ -1034,7 +1038,6 @@ main {
         width: calc(100% - 205px);
         text-align: justify;
         padding-right: 30px;
-        // margin-top: 7px;
         a {
             margin-left: 10px;
         }
@@ -1046,7 +1049,6 @@ main {
     font-weight: normal;
     margin-bottom: 100px;
     .policy_content {
-        // font-size: 14px;
         text-align: justify;
         color: rgb(109, 109, 109);
     }
@@ -1215,7 +1217,6 @@ main {
             background-color: $main-blue;
             width: 300px;
             top: 0;
-            // right: 0;
             left: 100%;
             height: 100vh;
             padding-top: 85px;
@@ -1223,8 +1224,6 @@ main {
             overflow-y: auto;
             &_item {
                 margin-bottom: 15px;
-                // padding: 0 20px;
-                // width: fit-content;
                 >a, >span {
                     width: 100%;
                     position: relative;
@@ -1279,7 +1278,6 @@ main {
             }
             &_drop {
                 position: static;
-                // display: block;
                 width: 100% !important;
                 height: auto;
                 padding: 10px 20px;
@@ -1398,10 +1396,10 @@ main {
     .content {
         &_detail {
             &_pic {
-                transform: translate(-30px,-30px);
+                // transform: translate(-30px,-30px);
             }
             &_inner {
-                padding-bottom: 50px;
+                // padding-bottom: 50px;
             }
         }
     }
@@ -1461,10 +1459,10 @@ main {
         &_detail {
             &_text {
                 width: 100%;
-                padding: 0 20px 0 30px;
+                padding: 20px 0 50px;
             }
             &_pic {
-                transform: translate(5px,-20px);
+                // transform: translate(5px,-20px);
                 margin: 0 auto;
             }
         }
@@ -1536,14 +1534,14 @@ main {
 
 
 @media screen and (min-width:768px) {
-    .content {
-        &_detail {
-            padding-left: 80px;
-            &_inner {
-                padding-right: 40px;
-            }
-        }
-    }
+    // .content {
+    //     &_detail {
+    //         padding-left: 80px;
+    //         &_inner {
+    //             padding-right: 40px;
+    //         }
+    //     }
+    // }
 }
 
 @media screen and (min-width:992px) {
@@ -1558,19 +1556,11 @@ main {
             width: calc((786px + 60px + (100vw - 960px)/2 + 20px - 120px) * 0.4);
         }
     }
-    .content {
-        &_detail {
-            padding-left: calc((100vw - 960px)/2 + 20px + 50px);
-            &_inner {
-                padding-right: $container-padding-lg;
-            }
-        }
-    }
-    // .header {
-    //     &_nav {
-    //         &_drop {
-    //             width: calc(786px + 60px + (100vw - 960px)/2 + 20px);
-    //             // display: block !important;
+    // .content {
+    //     &_detail {
+    //         padding-left: calc((100vw - 960px)/2 + 20px + 50px);
+    //         &_inner {
+    //             padding-right: $container-padding-lg;
     //         }
     //     }
     // }
@@ -1588,18 +1578,11 @@ main {
             width: calc((786px + 60px + (100vw - 1140px)/2 + 20px - 120px) * 0.4);
         }
     }
-    .content {
-        &_detail {
-            padding-left: calc((100vw - 1140px)/2 + 20px + 50px);
-            &_inner {
-                padding-right: $container-padding-lg;
-            }
-        }
-    }
-    // .header {
-    //     &_nav {
-    //         &_drop {
-    //             width: calc(786px + 60px + (100vw - 1140px)/2 + 20px);
+    // .content {
+    //     &_detail {
+    //         padding-left: calc((100vw - 1140px)/2 + 20px + 50px);
+    //         &_inner {
+    //             padding-right: $container-padding-lg;
     //         }
     //     }
     // }
@@ -1617,18 +1600,11 @@ main {
             width: calc((786px + 60px + (100vw - 1320px)/2 + 20px - 120px) * 0.4);
         }
     }
-    .content {
-        &_detail {
-            padding-left: calc((100vw - 1320px)/2 + 20px + 50px);
-            &_inner {
-                padding-right: $container-padding-xxl;
-            }
-        }
-    }
-    // .header {
-    //     &_nav {
-    //         &_drop {
-    //             width: calc(786px + 60px + (100vw - 1320px)/2 + 20px);
+    // .content {
+    //     &_detail {
+    //         padding-left: calc((100vw - 1320px)/2 + 20px + 50px);
+    //         &_inner {
+    //             padding-right: $container-padding-xxl;
     //         }
     //     }
     // }
