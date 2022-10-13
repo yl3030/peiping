@@ -1524,6 +1524,9 @@ main {
     width: 100%;
     padding: 20px 0 50px;
   }
+  .content_detail_text h2 {
+    font-size: 28px;
+  }
   .content_detail_pic {
     margin: 0 auto;
   }
@@ -4931,18 +4934,29 @@ main {
   margin-top: 40px;
 }
 
+.application_detail_pic {
+  width: 50%;
+}
+
 .application_detail_pic .content_detail_pic_inner {
   width: 100%;
 }
 
 .application_detail_text {
   width: 50%;
+  padding-left: 40px;
+  padding-top: 0;
+  padding-bottom: 0;
 }
 
 .application_detail_content {
   color: #565656;
   font-weight: normal;
   margin-top: 20px;
+}
+
+.application_detail_inner {
+  margin-bottom: 80px;
 }
 
 .application_pdList {
@@ -4972,15 +4986,17 @@ main {
   .application_pdList > .container {
     max-width: inherit;
   }
-}
-
-@media screen and (max-width: 767.98px) {
   .application_detail_pic {
-    width: 90%;
+    width: 100%;
   }
   .application_detail_text {
     width: 100%;
+    padding-top: 20px;
+    padding-left: 0;
   }
+}
+
+@media screen and (max-width: 767.98px) {
   .application_pdList {
     padding-left: 0;
   }
