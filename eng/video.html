@@ -284,7 +284,7 @@
                 <div class="video">
                     <div class="grid">
                         <div class="grid-sizer"></div> 
-                        <div class="video_item" data-bs-toggle="modal" data-bs-target="#videoPopup" data-video="#popupVideo1" onclick="onPlayer(event)">
+                        <div class="video_item" data-bs-toggle="modal" data-bs-target="#loginPopup" data-video="#popupVideo1" onclick="onPlayer(event)">
                             <div class="video_pic">
                                 <div class="video_pic_inner">
                                     <video class="video_mainPic" src="../public/video/video1.mov"></video>
@@ -399,8 +399,62 @@
               </div>
               <p class="videoPopup_name"></p>
               <button class="videoPopup_close" data-bs-dismiss="modal"><img src="../public/img/icon-close-white.svg" alt=""></button>
-              <!-- <button class="videoPopup_arrow prev"><img src="../public/img/arrow-deepgray-right.svg" alt=""></button> -->
-              <!-- <button class="videoPopup_arrow next"><img src="../public/img/arrow-deepgray-right.svg" alt=""></button> -->
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="modal fade loginPopup" id="loginPopup" tabindex="-1" aria-labelledby="loginPopupLabel" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-body">
+              <div class="loginPopup_main">
+                <h4>Login to view catalog</h4>
+                <form class="form-common" action="">
+                    <input type="email" placeholder="EMAIL">
+                    <input type="password" placeholder="password">
+                    <button>LOGIN</button>
+                </form>
+                <p>Not a member yet? <a data-bs-toggle="modal" data-bs-target="#SignupPopup" data-bs-dismiss="modal">Sign up </a> | <a data-bs-toggle="modal" data-bs-target="#forgetPopup" data-bs-dismiss="modal"> Forget password? </a></p>
+              </div>
+              <button class="loginPopup_close" data-bs-dismiss="modal"><img src="../public/img/icon-close-white.svg" alt=""></button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="modal fade loginPopup" id="SignupPopup" tabindex="-1" aria-labelledby="loginPopupLabel" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-body">
+              <div class="loginPopup_main">
+                <h4>Sign up</h4>
+                <form class="form-common" action="">
+                    <input type="email" placeholder="EMAIL">
+                    <input type="password" placeholder="password">
+                    <button>SIGNUP</button>
+                </form>
+                <p><a data-bs-toggle="modal" data-bs-target="#loginPopup" data-bs-dismiss="modal">Login </a></a></p>
+              </div>
+              <button class="loginPopup_close" data-bs-dismiss="modal"><img src="../public/img/icon-close-white.svg" alt=""></button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="modal fade loginPopup" id="forgetPopup" tabindex="-1" aria-labelledby="loginPopupLabel" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-body">
+              <div class="loginPopup_main">
+                <h4>Forget password?</h4>
+                <form class="form-common" action="">
+                    <input type="email" placeholder="EMAIL">
+                    <button>SEND</button>
+                </form>
+                <p><a data-bs-toggle="modal" data-bs-target="#loginPopup" data-bs-dismiss="modal">Login </a> | <a data-bs-toggle="modal" data-bs-target="#SignupPopup" data-bs-dismiss="modal"> Sign up </a></p>
+              </div>
+              <button class="loginPopup_close" data-bs-dismiss="modal"><img src="../public/img/icon-close-white.svg" alt=""></button>
             </div>
           </div>
         </div>

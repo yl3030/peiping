@@ -8,7 +8,7 @@
     }
     &-global {
         text-align: center;
-        padding: 100px 20px 0;
+        padding: 160px 20px 0;
         background-image: url(../img/global-bg.png);
         background-size: cover;
         background-position: center;
@@ -177,7 +177,7 @@
             padding: 6vw 8vw 4vw $container-padding-xxl;
             background-color: $main-blue;
             left: 0;
-            bottom: 0;
+            bottom: -15%;
             z-index: 0;
             width: 61vw;
             .title-home {
@@ -235,6 +235,14 @@
                 top: 30px;
             }
         }
+        &_history {
+            &_text {
+                bottom: -32%;
+            }
+        }
+    }
+    .intro-global {
+        padding-top: 220px;
     }
 }
 
@@ -347,7 +355,7 @@
                 position: static;
                 color: $gray-48;
                 background-color: transparent;
-                font-size: 24px;
+                // font-size: 24px;
                 width: 95%;
                 margin-left: auto;
                 margin-right: 0;
@@ -361,6 +369,9 @@
                 transform: translateY(-30px);
             }
         }
+    }
+    .intro-global {
+        padding-top: 80px;
     }
 }
 

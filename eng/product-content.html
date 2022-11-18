@@ -13,8 +13,20 @@
     <link rel="stylesheet" href="../public/css/bootstrap/bootstrap.css">
     <link rel="stylesheet" href="../public/css/swiper/swiper-bundle.min.css">
     <link rel="stylesheet" href="../public/css/aos/aos.css">
+    <link rel="stylesheet" href="../public/css/fancybox/jquery.fancybox-buttons.css">
+    <link rel="stylesheet" href="../public/css/fancybox/jquery.fancybox-thumbs.css">
+    <link rel="stylesheet" href="../public/css/fancybox/jquery.fancybox.css">
     <link rel="stylesheet" href="../public/css/style.css?20220915">
 </head>
+<style>
+    #fancybox-loading,
+    .fancybox-close,
+    .fancybox-prev span,
+    .fancybox-next span {
+      background-image: url(../public/css/fancybox/fancybox_sprite@2x.png);
+      background-size: 44px 152px;
+    }
+</style>
 <body>
     <div class="nav_lightBox"></div>
     <div class="nav_bg"></div>
@@ -255,19 +267,29 @@
                 <div class="swiper-container product_detail_bigSlider">
                     <div class="swiper-wrapper">
                         <div class="swiper-slide">
-                            <div class="product_detail_bigPic"><img src="../public/img/product-PP-13X.png" alt=""></div>
+                            <a href="../public/img/product-PP-13X.png" rel="gallery1" class="product_detail_bigPic">
+                                <img src="../public/img/product-PP-13X.png" alt="">
+                            </a>
                         </div>
                         <div class="swiper-slide">
-                          <div class="product_detail_bigPic"><img src="../public/img/product-PP-13SG.png" alt=""></div>
+                            <a href="../public/img/product-PP-13SG.png" rel="gallery1" class="product_detail_bigPic">
+                                <img src="../public/img/product-PP-13SG.png" alt="">
+                            </a>
                         </div>
                         <div class="swiper-slide">
-                          <div class="product_detail_bigPic"><img src="../public/img/product-PP-13SX.png" alt=""></div>
+                            <a href="../public/img/product-PP-13SX.png" rel="gallery1" class="product_detail_bigPic">
+                                <img src="../public/img/product-PP-13SX.png" alt="">
+                            </a>
                         </div>
                         <div class="swiper-slide">
-                          <div class="product_detail_bigPic"><img src="../public/img/product-PP-16C.png" alt=""></div>
+                            <a href="../public/img/product-PP-16C.png" rel="gallery1" class="product_detail_bigPic">
+                                <img src="../public/img/product-PP-16C.png" alt="">
+                            </a>
                         </div>
                         <div class="swiper-slide">
-                          <div class="product_detail_bigPic"><img src="../public/img/product-PP-25.png" alt=""></div>
+                            <a href="../public/img/product-PP-25.png" rel="gallery1" class="product_detail_bigPic">
+                                <img src="../public/img/product-PP-25.png" alt="">
+                            </a>
                         </div>
                     </div>     
                     <div class="swiper-button-next"></div>
@@ -295,15 +317,15 @@
             </div>
             <div class="product_detail_text">
                 <div class="product_detail_text_inner">
-                    <h2>Universal Cutter Grinder (PP-32N)</h2>
                     <div class="product_detail_id"><span>ID:PP-32N</span></div>
-                    <div class="product_detail_content">
-                        <!-- <ol>
+                    <h2>Universal Cutter Grinder (PP-32N)</h2>
+                    <!-- <div class="product_detail_content">
+                        <ol>
                             <li>The wheel heads can be rotated 360° and be installed two wheels. Just rotate the wheel head, when need to grind the tool of different materials.</li>
                             <li>Adopts the precision 4" 6-jaw awl type chuck. It can clip stably. At the same time, it can grind the cutting edge and web thickness of drills in one set-up. The both sides of drill angle and the edge length are equal. It could keep the accuracy of the center of drill without offset.</li>
                             <li>Easy operation, grind fast and precisely.</li>
-                        </ol> -->
-                    </div>
+                        </ol>
+                    </div> -->
                     <div class="d-sm-flex align-items-center justify-content-between">
                         <div class="product_detail_btn d-flex align-items-center">
                             <button class="btn-inquiry btn-iconText">
@@ -591,6 +613,12 @@
     <script src="../public/js/bootstrap/bootstrap.bundle.min.js"></script>
     <script src="../public/js/swiper/swiper-bundle.min.js"></script>
     <script src="../public/js/aos/aos.js"></script>
+    <script src="../public/js/fancybox/jquery.fancybox.js"></script>
+    <script src="../public/js/fancybox/jquery.fancybox-buttons.js"></script>
+    <script src="../public/js/fancybox/jquery.fancybox-media.js"></script>
+    <script src="../public/js/fancybox/jquery.fancybox-thumbs.js"></script>
+    <script src="../public/js/fancybox/jquery.fancybox.pack.js"></script>
+    <script src="../public/js/fancybox/jquery.mousewheel.pack.js"></script>
     <script src="../public/js/common.js"></script>
 
     <script>
@@ -622,6 +650,12 @@
                 prevEl: ".swiper-button-prev",
             },
         })
+        $(document).ready(function () {
+        $(".product_detail_bigPic").fancybox({
+          prevEffect: "none",
+          nextEffect: "none",
+        });
+      });
     </script>
 
 </body>
