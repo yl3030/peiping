@@ -73,7 +73,6 @@ main {
 .nav {
     &_bg {
         width: calc(786px + 60px + (100vw - 1320px)/2 + 20px);
-        // height: 100vh;
         height: 0;
         position: fixed;
         top: 0;
@@ -81,7 +80,6 @@ main {
         background-color: $main-blue;
         z-index: 130;
         overflow-y: auto;
-        // display: none;
         transition: $common-transition;
         &.active {
             height: 100vh;
@@ -96,7 +94,6 @@ main {
         top: 0;
         left: 0;
         z-index: 30;
-        // display: none;
         opacity: 0;
         visibility: hidden;
         transition: $common-transition;
@@ -186,40 +183,20 @@ main {
             }
             &:hover {
                 .header_nav_drop {
-                    // opacity: 1;
-                    // visibility: visible;
                     display: block;
                 }
             }
         }
         &_drop {
-            // position: fixed;
-            // width: calc(786px + 60px + (100vw - 1320px)/2 + 20px);
-            // height: calc(100vh - 50px);
-            // padding: 50px 80px 40px;
-            // top: 50px;
-            // right: 0;
-            // display: block;
             display: none;
-            // opacity: 0;
-            // visibility: hidden;
-            // transition: 0.3s;
             background-color: #fff;
-
-
-            // new style
-            // width: 380px;
             position: absolute;
             width: 150px;
-            // background-color: rgba(255,255,255,0.9);
             left: 0;
             top: 100%;
             background-color: transparent;
             padding: 10px 0 0 0;
-            // new style
             >ul {
-                // width: 60%;
-                // padding-right: 50px;
                 background-color: rgba(255,255,255,0.9);
                 padding: 25px;
                 box-shadow: 0 5px 15px rgba(0,0,0,0.2);
@@ -228,26 +205,15 @@ main {
                     >a {
                         font-size: 20px;
                         font-weight: normal;
-                        // color: rgba(255, 255, 255, 0.4);
                         transition: $common-transition;
                         display: block;
                         width: 100%;
-
-                        // new style
                         font-size: 16px;
-                        // new style
                     }
                     &:hover {
                         >a {
-                            // color: #fff;
                             font-weight: bold;
-
-                            // new style
                             color: $main-blue;
-                            // new style
-                        }
-                        .header_nav_pic {
-                            // opacity: 1;
                         }
                     }
                     &:last-child {
@@ -255,10 +221,6 @@ main {
                     }
                 }
             }
-            // &.active {
-            //     opacity: 1;
-            //     visibility: visible;
-            // }
             &.nav-big {
                 width: 380px;
             }
@@ -270,19 +232,15 @@ main {
             padding-top: 10px;
             padding-left: 30px;
             padding-bottom: 10px;
-            // display: none;
             >li {
                 margin-bottom: 5px;
                 a {
-                    // font-size: 18px;
                     font-size: 14px;
                     font-weight: normal;
-                    // color: rgba(255, 255, 255, 0.4);
                     transition: $common-transition;
                 }
                 &:hover {
                     a {
-                        // color: #fff;
                         color: $main-blue;
                         font-weight: bold;
                     }
@@ -305,11 +263,9 @@ main {
         }
     }
     &_search {
-        // border: 1px solid #fff;
         height: 40px;
         padding-right: 0;
         margin-left: 25px;
-        // width: 45px;
         white-space: nowrap;
         position: relative;
         display: flex;

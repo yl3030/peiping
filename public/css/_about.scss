@@ -147,6 +147,36 @@
             display: flex;
             flex-wrap: wrap;
         }
+        &_pic {
+            width: 86%;
+            padding-bottom: calc(86% * 0.69);
+            position: relative;
+            img {
+                position: absolute;
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+        }
+        &_equipTitle {
+            position: absolute;
+            padding: 8px 38px;
+            background-color: $main-blue;
+            font-weight: 700;
+            font-size: 18px;
+            color: #fff;
+            top: 13%;
+            right: -16%;
+        }
+        &_historyTitle {
+            width: 60%;
+            background-color: $main-blue;
+            padding: 76px $container-padding-xxl 48px 150px;
+            margin: -25px 0 0 auto;
+            p {
+                color: #fff;
+            }
+        }
     }
     &_equip {
         width: 50%;
@@ -212,6 +242,12 @@
                 }
             }
         }
+        &_eh {
+            &_historyTitle {
+                padding-right: $container-padding-xl;
+                padding-left: 100px;
+            }
+        }
     }
 }
 
@@ -238,6 +274,12 @@
         &_history {
             &_text {
                 bottom: -32%;
+            }
+        }
+        &_eh {
+            &_historyTitle {
+                padding-right: $container-padding-lg;
+                padding-left: 100px;
             }
         }
     }
@@ -345,6 +387,9 @@
             .about_content_pic {
                 width: 95%;
                 padding-bottom: calc(95% * 0.69);
+            }
+            &_pic {
+                margin-bottom: 110px;
             }
         }
         &_history {
