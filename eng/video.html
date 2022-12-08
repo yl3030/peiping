@@ -409,13 +409,24 @@
           <div class="modal-content">
             <div class="modal-body">
               <div class="loginPopup_main">
-                <h4>Login to view catalog</h4>
-                <form class="form-common" action="">
-                    <input type="email" placeholder="EMAIL">
-                    <input type="password" placeholder="password">
+                <h4>Login to <br><span>view catalog</span></h4>
+                <form class="" action="">
+                    <div class="login_input login_password">
+                        <div class="login_input_icon"><img src="../public/img/icon-password.svg" alt=""></div>
+                        <input type="password" placeholder="Password">
+                    </div>
+                    <div class="login_input login_code">
+                        <div class="login_input_icon"><img src="../public/img/icon-eye.svg" alt=""></div>
+                        <input type="number" placeholder="code">
+                        <div class="code-pic">
+                            <img class="certify" src="../public/img/certify.png" alt="">
+                            <img class="transfer" src="../public/img/icon_transfer-gray.svg" alt="">
+                        </div>
+                    </div>
                     <button>LOGIN</button>
+                    <a href="./contact.html">Request Password</a>
                 </form>
-                <p>Not a member yet? <a data-bs-toggle="modal" data-bs-target="#SignupPopup" data-bs-dismiss="modal">Sign up </a> | <a data-bs-toggle="modal" data-bs-target="#forgetPopup" data-bs-dismiss="modal"> Forget password? </a></p>
+                <!-- <p>Not a member yet? <a data-bs-toggle="modal" data-bs-target="#SignupPopup" data-bs-dismiss="modal">Sign up </a> | <a data-bs-toggle="modal" data-bs-target="#forgetPopup" data-bs-dismiss="modal"> Forget password? </a></p> -->
               </div>
               <button class="loginPopup_close" data-bs-dismiss="modal"><img src="../public/img/icon-close-white.svg" alt=""></button>
             </div>

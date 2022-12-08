@@ -191,6 +191,10 @@
     .modal-dialog {
         margin-top: 100px;
     }
+    .modal-content {
+        border-radius: 0;
+        border-top: 5px solid $main-red;
+    }
     &_close {
         position: absolute;
         width: 30px;
@@ -207,20 +211,83 @@
             text-align: center;
             font-weight: 600;
             padding-bottom: 20px;
+            font-size: 32px;
+            line-height: 0.8;
+            span {
+                font-size: 16px;
+                font-weight: normal;
+                color: $main-blue;
+            }
         }
         form {
             padding-bottom: 30px;
-            border-bottom: 1px solid rgb(202, 202, 202);
-            input {
-                margin-bottom: 15px;
+            // border-bottom: 1px solid rgb(202, 202, 202);
+            .login {
+                &_input {
+                    display: flex;
+                    align-items: center;
+                    height: 50px;
+                    padding: 5px 0;
+                    border-bottom: 1px solid $gray-c6;
+                    margin-bottom: 20px;
+                    &_icon {
+                        width: 40px;
+                        border-right: 1px solid $gray-c6;
+                        img {
+                            width: 50%;
+                            display: block;
+                            margin: 0 auto;
+                        }
+                    }
+                    input {
+                        height: 100%;
+                        padding: 0 10px;
+                        &::placeholder {
+                            color: $gray-ec;
+                        }
+                    }
+                }
+                &_password {
+                    input {
+                        width: calc(100% - 40px);
+                    }
+                }
+                &_code {
+                    .code-pic {
+                        display: flex;
+                        align-items: center;
+                        width: 90px;
+                        justify-content: space-between;
+                        .certify {
+                            width: 60px;
+                        }
+                        .transfer {
+                            width: 20px;
+                            cursor: pointer;
+                        }
+                    }
+                    input {
+                        width: calc(100% - 40px - 90px);
+                    }
+                }
+            }
+            a {
+                display: block;
+                text-align: center;
+                margin-top: 10px;
+                color: $main-blue;
+                text-decoration: underline;
+                font-size: 14px;
+                font-weight: normal;
             }
             button {
                 background-color: #464646;
                 color: #fff;
                 font-weight: bold;
                 padding: 10px 25px;
+                width: 100%;
                 display: block;
-                margin: 0 auto;
+                margin: 15px auto 0;
                 transition: 0.3s;
                 &:hover {
                     background-color: $main-red;
@@ -316,6 +383,11 @@
             &_name {
                 width: calc(100% - 100px);
             }
+        }
+    }
+    .loginPopup {
+        .modal-body {
+            padding: 40px 30px;
         }
     }
 }
