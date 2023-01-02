@@ -294,7 +294,7 @@
                     <div class="tab-content" id="v-pills-tabContent">
                         <div class="tab-pane fade show active" id="product1" role="tabpanel" aria-labelledby="product1-tab">
                             <div class="home-product_slider_inner">
-                                <div class="swiper-container home-product_swiper">
+                                <div class="swiper-container home-product_swiper" id="product-swiper-1">
                                     <div class="swiper-wrapper align-items-end">
                                       <div class="swiper-slide">
                                           <div class="home-product_item">
@@ -331,13 +331,13 @@
                                       </div>
                                     </div>     
                                 </div>
-                                <div class="swiper-button-next"></div>
-                                <div class="swiper-button-prev"></div>
+                                <div class="swiper-button-next" id="product-next-1"></div>
+                                <div class="swiper-button-prev" id="product-prev-1"></div>
                             </div>
                         </div>
                         <div class="tab-pane fade" id="product2" role="tabpanel" aria-labelledby="product2-tab">
                             <div class="home-product_slider_inner">
-                                <div class="swiper-container home-product_swiper">
+                                <div class="swiper-container home-product_swiper" id="product-swiper-2">
                                     <div class="swiper-wrapper align-items-end">
                                       <div class="swiper-slide">
                                           <div class="home-product_item">
@@ -374,13 +374,13 @@
                                       </div>
                                     </div>     
                                 </div>
-                                <div class="swiper-button-next"></div>
-                                <div class="swiper-button-prev"></div>
+                                <div class="swiper-button-next" id="product-next-2"></div>
+                                <div class="swiper-button-prev" id="product-prev-2"></div>
                             </div>
                         </div>
                         <div class="tab-pane fade" id="product3" role="tabpanel" aria-labelledby="product3-tab">
                             <div class="home-product_slider_inner">
-                                <div class="swiper-container home-product_swiper">
+                                <div class="swiper-container home-product_swiper" id="product-swiper-3">
                                     <div class="swiper-wrapper align-items-end">
                                       <div class="swiper-slide">
                                           <div class="home-product_item">
@@ -417,13 +417,13 @@
                                       </div>
                                     </div>     
                                 </div>
-                                <div class="swiper-button-next"></div>
-                                <div class="swiper-button-prev"></div>
+                                <div class="swiper-button-next" id="product-next-3"></div>
+                                <div class="swiper-button-prev" id="product-prev-3"></div>
                             </div>
                         </div>
                         <div class="tab-pane fade" id="product4" role="tabpanel" aria-labelledby="product4-tab">
                             <div class="home-product_slider_inner">
-                                <div class="swiper-container home-product_swiper">
+                                <div class="swiper-container home-product_swiper" id="product-swiper-4">
                                     <div class="swiper-wrapper align-items-end">
                                       <div class="swiper-slide">
                                           <div class="home-product_item">
@@ -460,13 +460,13 @@
                                       </div>
                                     </div>     
                                 </div>
-                                <div class="swiper-button-next"></div>
-                                <div class="swiper-button-prev"></div>
+                                <div class="swiper-button-next" id="product-next-4"></div>
+                                <div class="swiper-button-prev" id="product-prev-4"></div>
                             </div>
                         </div>
                         <div class="tab-pane fade" id="product5" role="tabpanel" aria-labelledby="product5-tab">
                             <div class="home-product_slider_inner">
-                                <div class="swiper-container home-product_swiper">
+                                <div class="swiper-container home-product_swiper" id="product-swiper-5">
                                     <div class="swiper-wrapper align-items-end">
                                       <div class="swiper-slide">
                                           <div class="home-product_item">
@@ -503,8 +503,8 @@
                                       </div>
                                     </div>     
                                 </div>
-                                <div class="swiper-button-next"></div>
-                                <div class="swiper-button-prev"></div>
+                                <div class="swiper-button-next" id="product-next-5"></div>
+                                <div class="swiper-button-prev" id="product-prev-5"></div>
                             </div>
                         </div>
                     </div>
@@ -674,15 +674,15 @@
         })
 
         // product swiper
-        var swiperProduct = new Swiper(".home-product_swiper", {
+        var swiperProduct = new Swiper("#product-swiper-1", {
             slidesPerView: 1,
             slidesPerGroup: 1,
             loop: true,
             observeParents:true,
             observer:true,
             navigation: {
-                nextEl: ".swiper-button-next",
-                prevEl: ".swiper-button-prev",
+                nextEl: "#product-next-1",
+                prevEl: "#product-prev-1",
             },
             speed: 1000,
             breakpoints: {
@@ -691,7 +691,80 @@
                     // slidesPerView: 2,
                 },
             }
-        })
+        });
+        var swiperProduct = new Swiper("#product-swiper-2", {
+            slidesPerView: 1,
+            slidesPerGroup: 1,
+            loop: true,
+            observeParents:true,
+            observer:true,
+            navigation: {
+                nextEl: "#product-next-2",
+                prevEl: "#product-prev-2",
+            },
+            speed: 1000,
+            breakpoints: {
+                576: {
+                    slidesPerView: 1.7,
+                    // slidesPerView: 2,
+                },
+            }
+        });
+        var swiperProduct = new Swiper("#product-swiper-3", {
+            slidesPerView: 1,
+            slidesPerGroup: 1,
+            loop: true,
+            observeParents:true,
+            observer:true,
+            navigation: {
+                nextEl: "#product-next-3",
+                prevEl: "#product-prev-3",
+            },
+            speed: 1000,
+            breakpoints: {
+                576: {
+                    slidesPerView: 1.7,
+                    // slidesPerView: 2,
+                },
+            }
+        });
+        var swiperProduct = new Swiper("#product-swiper-4", {
+            slidesPerView: 1,
+            slidesPerGroup: 1,
+            loop: true,
+            observeParents:true,
+            observer:true,
+            navigation: {
+                nextEl: "#product-next-4",
+                prevEl: "#product-prev-4",
+            },
+            speed: 1000,
+            breakpoints: {
+                576: {
+                    slidesPerView: 1.7,
+                    // slidesPerView: 2,
+                },
+            }
+        });
+        var swiperProduct = new Swiper("#product-swiper-5", {
+            slidesPerView: 1,
+            slidesPerGroup: 1,
+            loop: true,
+            observeParents:true,
+            observer:true,
+            navigation: {
+                nextEl: "#product-next-5",
+                prevEl: "#product-prev-5",
+            },
+            speed: 1000,
+            breakpoints: {
+                576: {
+                    slidesPerView: 1.7,
+                    // slidesPerView: 2,
+                },
+            }
+        });
+
         
         
         // swiper tab
