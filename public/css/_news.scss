@@ -83,12 +83,21 @@
         }
         &_text {
             width: 100%;
+            ul {
+                margin: 10px 0;
+            }
+            a {
+                text-decoration: underline;
+                color: $main-blue !important;
+            }
         }
         &_inner {
             max-width: 890px;
             width: 100%;
             margin: 0 auto;
             padding: 0 20px;
+            font-weight: 300;
+            line-height: 1.6;
         }
     }
 }
